@@ -1,0 +1,24 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		60,
+		-20
+	],
+	"scale": 1,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				-1,
+				-11
+			],
+			"loop_name": "bftalkloop",
+			"idle_name": "BFTalk"
+		}
+	],
+	"image": "DavePre-Polygonized_Dialogue"
+}

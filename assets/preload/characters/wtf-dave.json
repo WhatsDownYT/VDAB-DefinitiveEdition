@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				2,
+				352
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"offsets": [
+				1,
+				390
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				11,
+				282
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"offsets": [
+				4,
+				380
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"offsets": [
+				24,
+				313
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				70
+			],
+			"anim": "scared",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/wtf_dave",
+	"position": [
+		0,
+		280
+	],
+	"healthicon": "davesharted",
+	"flip_x": false,
+	"healthbar_colors": [
+		215,
+		142,
+		166
+	],
+	"camera_position": [
+		-30,
+		-415
+	],
+	"sing_duration": 6.1,
+	"scale": 0.68
+}

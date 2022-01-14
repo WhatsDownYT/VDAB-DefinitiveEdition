@@ -1,0 +1,46 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "Here we have Dave, minding his own business...",
+			"boxState": "normal",
+			"speed": 0.045,
+			"portrait": "generic"
+		},
+		{
+			"expression": "talk",
+			"text": "beep!",
+			"boxState": "normal",
+			"speed": 0.06,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "Wait, who are you two?",
+			"boxState": "normal",
+			"speed": 0.06,
+			"portrait": "davehouse"
+		},
+		{
+			"expression": "talk",
+			"text": "Oh wait! I saw you guys a couple days ago!",
+			"boxState": "normal",
+			"speed": 0.06,
+			"portrait": "davehouse"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "beep bop"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "davehouse",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Oh, you want to sing? Let's go then!"
+		}
+	]
+}

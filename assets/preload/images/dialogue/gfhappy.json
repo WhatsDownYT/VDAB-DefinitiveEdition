@@ -1,0 +1,24 @@
+{
+	"dialogue_pos": "right",
+	"position": [
+		-80,
+		-40
+	],
+	"scale": 0.95,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				-1,
+				-11
+			],
+			"loop_name": "bftalkloop",
+			"idle_name": "BFTalk"
+		}
+	],
+	"image": "GFHappy_Dialogue"
+}

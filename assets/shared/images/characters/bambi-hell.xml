@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="blankbambi.png"><SubTexture name="blankbambi IDLE0000" x="0" y="0" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi IDLE0001" x="824" y="0" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi IDLE0002" x="1648" y="0" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi IDLE0003" x="2472" y="0" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi IDLE0004" x="3296" y="0" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi IDLE0005" x="0" y="1084" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi IDLE0006" x="824" y="1084" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi LEFT0000" x="1648" y="1084" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi LEFT0001" x="2472" y="1084" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi LEFT0002" x="3296" y="1084" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi LEFT0003" x="0" y="2168" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi LEFT0004" x="824" y="2168" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi LEFT0005" x="1648" y="2168" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi LEFT0006" x="2472" y="2168" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi RIGHT0000" x="3296" y="2168" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi RIGHT0001" x="0" y="3252" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi RIGHT0002" x="824" y="3252" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi RIGHT0003" x="1648" y="3252" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi RIGHT0004" x="2472" y="3252" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi RIGHT0005" x="3296" y="3252" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi RIGHT0006" x="0" y="4336" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi DOWN0000" x="824" y="4336" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi DOWN0001" x="1648" y="4336" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi DOWN0002" x="2472" y="4336" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi DOWN0003" x="3296" y="4336" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi DOWN0004" x="0" y="5420" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi UP0000" x="824" y="5420" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi UP0001" x="1648" y="5420" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi UP0002" x="2472" y="5420" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi UP0003" x="3296" y="5420" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi UP0004" x="0" y="6504" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi UP0005" x="824" y="6504" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+<SubTexture name="blankbambi UP0006" x="1648" y="6504" width="824" height="1084" frameX="0" frameY="0" frameWidth="824" frameHeight="1084" />
+</TextureAtlas>

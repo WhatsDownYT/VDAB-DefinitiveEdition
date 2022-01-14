@@ -1,0 +1,221 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "Fine... You win...",
+			"boxState": "normal",
+			"speed": 0.065,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "Beep.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "Huh?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "Beephoo bah bee boski ba ska bee bo boop",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "Oh... I'm sorry you actually here for Dave?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "But Dave isn't here though... Whatchu mean?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "Yeah, Dave isn't even here!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "gfannoyed"
+		},
+		{
+			"expression": "talk",
+			"text": "Dave comes out of the corn.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "generic"
+		},
+		{
+			"expression": "talk",
+			"text": "Hey, I'm here. Sorry I was running late.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "davehouse"
+		},
+		{
+			"expression": "talk",
+			"text": "Tristan was a pain to get up.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "davebambi-week"
+		},
+		{
+			"expression": "talk",
+			"text": "He was like \"''But Dave, it's Saturday, we don't have school!''",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "davebambi-week"
+		},
+		{
+			"expression": "talk",
+			"text": "DON'T TALK ABOUT ME LIKE I'M NOT HERE!",
+			"boxState": "normal",
+			"speed": 0.04,
+			"portrait": "tristan"
+		},
+		{
+			"expression": "talk",
+			"text": "With all due respect, son, shut up.",
+			"boxState": "normal",
+			"speed": 0.055,
+			"portrait": "davebambi-week"
+		},
+		{
+			"expression": "talk",
+			"text": "MEANIE!!!",
+			"boxState": "normal",
+			"speed": 0.03,
+			"portrait": "tristan"
+		},
+		{
+			"expression": "talk",
+			"text": "Anyways, he's homeschooled so I make the rules.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "davehouse"
+		},
+		{
+			"expression": "talk",
+			"text": "Oh. Ohhh, ohhhhhh!",
+			"boxState": "normal",
+			"speed": 0.07,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "So I BROKE MY PHONE FOR NO REASON!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "Yeah, and I have no idea why you thought that was a good idea.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "gfannoyed"
+		},
+		{
+			"expression": "talk",
+			"text": "I'M SO STUPID!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambiangry"
+		},
+		{
+			"expression": "talk",
+			"text": "Bambi, you may think you're stupid, but atleast you're not the people who got cryogenically frozen in my basement.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "davebambi-week"
+		},
+		{
+			"expression": "talk",
+			"text": "Those idiots aren't gonna wake up until atleast the next millennium!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "daveinsanity"
+		},
+		{
+			"expression": "talk",
+			"text": "Everyone awkwardly stares at Dave.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "generic"
+		},
+		{
+			"expression": "talk",
+			"text": "Hahahaha... What?",
+			"boxState": "normal",
+			"speed": 0.085,
+			"portrait": "davebambi-week"
+		},
+		{
+			"expression": "talk",
+			"text": "Uhhh, anyways lets get this picnic started!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "gfhappy"
+		},
+		{
+			"expression": "talk",
+			"text": "I even brought N&Ns!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "gfhappy"
+		},
+		{
+			"expression": "talk",
+			"text": "I brought Mint Chocolate Chip Cupcakes.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "davehouse"
+		},
+		{
+			"expression": "talk",
+			"text": "I got NICE_POP.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambigrin"
+		},
+		{
+			"expression": "talk",
+			"text": "(What the hell are any of these foods?)",
+			"boxState": "normal",
+			"speed": 0,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "Everyone eventually settles down and has a picnic.",
+			"boxState": "normal",
+			"speed": 0.06,
+			"portrait": "generic"
+		},
+		{
+			"expression": "talk",
+			"text": "Bambi also starts a food fight out of nowhere, but that's besides the point.",
+			"boxState": "normal",
+			"speed": 0.06,
+			"portrait": "generic"
+		},
+		{
+			"speed": 0.11,
+			"portrait": "generic",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "To be continued..."
+		}
+	]
+}

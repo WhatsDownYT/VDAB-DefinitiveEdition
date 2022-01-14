@@ -1,0 +1,172 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "davesplitathon",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Woah! Nice rapping! How about another one-"
+		},
+		{
+			"speed": 0.04,
+			"portrait": "tristan",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "DAD!!! I'm done playing the game on Bambi's phone! Can we go home now? I'm tired."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "davebambi-week",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "You were doing WHAT?!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bambiangry",
+			"boxState": "angry",
+			"expression": "talk",
+			"text": "I NEVER TOLD YOU THAT YOU COULD USE MY PHONE!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "tristan",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "BUT IT'S REALLY FUN!!!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "tristan",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "You have these number buttons, and you can arrange them in different orders to hear different things!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "tristan",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "My favorite one to type in is 911-"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "davebambi-week",
+			"boxState": "angry",
+			"expression": "talk",
+			"text": "SON! YOU'RE GROUNDED!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "generic",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Tristan begins to cry."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "tristan",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Why, daddy? It's fun!"
+		},
+		{
+			"speed": 0.045,
+			"portrait": "davebambi-week",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "THOSE ARE REAL PEOPLE!!! This also means I'm taking away YOUR phone. Hand it over."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "tristan",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "But dad-"
+		},
+		{
+			"speed": 0.075,
+			"portrait": "davebambi-week",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "No buts. Hand. It. Over."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "generic",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Tristan hands over the phone."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "davehouse",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Thank you."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "davehouse",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Anyways, I guess this is goodbye, boyfriend. See you around!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Bap beebop!"
+		},
+		{
+			"speed": 0.045,
+			"portrait": "davehouse",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Wonderful! Tristan has to go to bed now, so we'll be leaving. Bambi, do you need to sleep on our couch tonight?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bambigrin",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "I can sleep in the barn!"
+		},
+		{
+			"speed": 0.07,
+			"portrait": "davehouse",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Errrrr... ok! Bye bye!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bambigrin",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Bye bye!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Bee bee!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gfhappy",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "See-ya!"
+		},
+		{
+			"speed": 0.14,
+			"portrait": "generic",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "The end.                ...?"
+		}
+	]
+}

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				453,
+				205
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "left"
+		},
+		{
+			"offsets": [
+				342,
+				161
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "right"
+		},
+		{
+			"offsets": [
+				340,
+				220
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				361,
+				23
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "down"
+		},
+		{
+			"offsets": [
+				344,
+				243
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Gary",
+	"position": [
+		120,
+		160
+	],
+	"healthicon": "gary",
+	"flip_x": false,
+	"healthbar_colors": [
+		86,
+		83,
+		81
+	],
+	"camera_position": [
+		-380,
+		-310
+	],
+	"sing_duration": 4,
+	"scale": 1.4
+}

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="bambi-rage.png"><SubTexture name="Idle0000" x="0" y="0" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+<SubTexture name="Idle0001" x="348" y="0" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+<SubTexture name="Idle0002" x="696" y="0" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+<SubTexture name="Idle0003" x="1044" y="0" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+<SubTexture name="Idle0004" x="0" y="327" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+<SubTexture name="Idle0005" x="348" y="327" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+<SubTexture name="Idle0006" x="696" y="327" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+<SubTexture name="Idle0007" x="1044" y="327" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+<SubTexture name="Idle0008" x="0" y="654" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+<SubTexture name="Idle0009" x="348" y="654" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+<SubTexture name="Idle0010" x="696" y="654" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+<SubTexture name="Idle0011" x="1044" y="654" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+<SubTexture name="Idle0012" x="0" y="981" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+<SubTexture name="Idle0013" x="348" y="981" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+<SubTexture name="Idle0014" x="696" y="981" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+<SubTexture name="Idle0015" x="1044" y="981" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+<SubTexture name="Idle0016" x="0" y="1308" width="348" height="327" frameX="0" frameY="0" frameWidth="348" frameHeight="327" />
+</TextureAtlas>

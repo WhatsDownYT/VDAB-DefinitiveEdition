@@ -1,0 +1,17 @@
+stage
+spooky
+philly
+limo
+mall
+mallEvil
+school
+schoolEvil
+houseDay
+houseSunset
+houseNight
+farmDay
+farmNight
+farmSunset
+3dRed
+3dGreen
+3dScary

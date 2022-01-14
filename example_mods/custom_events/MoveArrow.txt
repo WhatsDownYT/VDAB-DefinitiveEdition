@@ -1,0 +1,4 @@
+Change Note Position
+
+Value 1: Note (0-7)
+Value 2: x value, y value, rotation, opacity (0-1), duration

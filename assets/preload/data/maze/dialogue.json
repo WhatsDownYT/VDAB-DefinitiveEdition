@@ -1,0 +1,214 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "My phone...",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "Look what you two did!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambiangry"
+		},
+		{
+			"expression": "talk",
+			"text": "You don't know what you guys just got me into!!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambiangry"
+		},
+		{
+			"expression": "talk",
+			"text": "You both are gonna die!!!",
+			"boxState": "angry",
+			"speed": 0.04,
+			"portrait": "bambiangry"
+		},
+		{
+			"expression": "talk",
+			"text": "Huh?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "gfconfused"
+		},
+		{
+			"expression": "talk",
+			"text": "INCOMING CALL FROM: DAVE",
+			"boxState": "normal",
+			"speed": 0,
+			"portrait": "generic"
+		},
+		{
+			"expression": "talk",
+			"text": "Bambi! I bought you that phone 3 hours ago!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "davebambi-week"
+		},
+		{
+			"expression": "talk",
+			"text": "I BREAK MY PHONE!!",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "bambiangry"
+		},
+		{
+			"expression": "talk",
+			"text": "BECAUSE THEY ARE TRYING TO STEAL CORN!!",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "bambiangry"
+		},
+		{
+			"expression": "talk",
+			"text": "What?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "davebambi-week"
+		},
+		{
+			"expression": "talk",
+			"text": "Beep.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "I only sent them here as an apology for almost destroying the world, they aren't at all trying to trespass.",
+			"boxState": "normal",
+			"speed": 0.04,
+			"portrait": "davebambi-week"
+		},
+		{
+			"expression": "talk",
+			"text": "What?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "Can you please just stop getting on to them?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "davebambi-week"
+		},
+		{
+			"expression": "talk",
+			"text": "You lying? You liar!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambiangry"
+		},
+		{
+			"expression": "talk",
+			"text": "No, I promise you I'm not lying Bambi.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "davebambi-week"
+		},
+		{
+			"expression": "talk",
+			"text": "NO YOU LYING!!",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "bambiangry"
+		},
+		{
+			"expression": "talk",
+			"text": "HANG UP",
+			"boxState": "normal",
+			"speed": 0,
+			"portrait": "generic"
+		},
+		{
+			"expression": "talk",
+			"text": "That's it, that's it!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambiangry"
+		},
+		{
+			"expression": "talk",
+			"text": "Beep boop bap skdoop",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "You two are going to DIE!!!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambiangry"
+		},
+		{
+			"expression": "talk",
+			"text": "I don't care if I'm tired, I don't care if I'm bored.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "I will be here all day and I will end you your lives!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambiangry"
+		},
+		{
+			"expression": "talk",
+			"text": "One more song... If you win, I-I, uhh..",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "Beep?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "I guess we call it a draw.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "You ready?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambigrin"
+		},
+		{
+			"expression": "talk",
+			"text": "Boopee bap",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "THEN LETS GO YOU IDIOT!",
+			"boxState": "normal",
+			"speed": 0.04,
+			"portrait": "bambiangry"
+		},
+		{
+			"expression": "talk",
+			"text": "This one gonna be long, so get ready!",
+			"boxState": "normal",
+			"speed": 0.045,
+			"portrait": "bambigrin"
+		}
+	]
+}

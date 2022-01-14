@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				6,
+				25
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "MARCELLO idle dance",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				17,
+				9
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "MARCELLO NOTE DOWN",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				15,
+				30
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "MARCELLO NOTE UP",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				41,
+				24
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "MARCELLO NOTE LEFT",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				17,
+				23
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "MARCELLO NOTE RIGHT",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bambi-old",
+	"position": [
+		110,
+		350
+	],
+	"healthicon": "bambiJoke",
+	"flip_x": true,
+	"healthbar_colors": [
+		0,
+		215,
+		20
+	],
+	"camera_position": [
+		-50,
+		70
+	],
+	"sing_duration": 6.1,
+	"scale": 1.1
+}

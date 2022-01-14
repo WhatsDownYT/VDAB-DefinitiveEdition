@@ -1,0 +1,18 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "Oh... oh no...",
+			"boxState": "normal",
+			"portrait": "davepre-polygonized",
+			"speed": 0.5
+		},
+		{
+			"expression": "talk",
+			"text": "Bep?",
+			"boxState": "normal",
+			"portrait": "bf",
+			"speed": 0.05
+		}
+	]
+}

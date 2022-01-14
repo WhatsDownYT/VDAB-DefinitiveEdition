@@ -1,0 +1,3 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="expunged.png"><SubTexture name=" idle0000" x="0" y="0" width="408" height="810" frameX="0" frameY="0" frameWidth="408" frameHeight="810" />
+</TextureAtlas>

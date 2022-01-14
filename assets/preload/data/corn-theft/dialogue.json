@@ -1,0 +1,137 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "INCOMING CALL FROM: DAVE",
+			"boxState": "normal",
+			"speed": 0,
+			"portrait": "generic"
+		},
+		{
+			"expression": "talk",
+			"text": "Huh? Hello?",
+			"boxState": "normal",
+			"speed": 0.06,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "Hey Bambi, they're not trespassing.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "davebambi-week"
+		},
+		{
+			"expression": "talk",
+			"text": "What?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "I invited them over as an apology for nearly turning the world 3D.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "davebambi-week"
+		},
+		{
+			"expression": "talk",
+			"text": "Ok? Whatchu mean?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "Bambi, listen-",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "davebambi-week"
+		},
+		{
+			"expression": "talk",
+			"text": "I dunno what you trying to say, GOODBYE!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambigrin"
+		},
+		{
+			"expression": "talk",
+			"text": "HANG UP",
+			"boxState": "normal",
+			"speed": 0,
+			"portrait": "generic"
+		},
+		{
+			"expression": "talk",
+			"text": "Uhhh...",
+			"boxState": "normal",
+			"speed": 0.12,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "Are you two using Dave invite as excuse to steal corn!?",
+			"boxState": "angry",
+			"speed": 0.04,
+			"portrait": "bambiangry"
+		},
+		{
+			"expression": "talk",
+			"text": "What?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "gfconfused"
+		},
+		{
+			"expression": "talk",
+			"text": "That's not what we're trying to do at all!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "gfannoyed"
+		},
+		{
+			"expression": "talk",
+			"text": "Bee buuhh bi beeen boo bi bayb",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "Ok, you know what-",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambiangry"
+		},
+		{
+			"expression": "talk",
+			"text": "Don't win this one... or... or...",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "I'll break my phone!",
+			"boxState": "angry",
+			"speed": 0.04,
+			"portrait": "bambiangry"
+		},
+		{
+			"expression": "talk",
+			"text": "Yeah, I'll smash my phone and you'll get\\ngrounded!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambigrin"
+		},
+		{
+			"expression": "talk",
+			"text": "Bop..",
+			"boxState": "normal",
+			"speed": 0.09,
+			"portrait": "bf"
+		}
+	]
+}

@@ -1,0 +1,39 @@
+{
+	"songs": [
+		[
+			"Example High",
+			"mom",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Example Roses",
+			"",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"weekCharacters": [
+		"Mom",
+		"bf",
+		"gf"
+	],
+	"storyName": "Examples",
+	"weekName": "Custom Week",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": true,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

@@ -1,0 +1,53 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "WHAT",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "davepolygonized"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "davepolygonized",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "WHAT IS HAPPENING"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "davepolygonized",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "THE WORLD IS BECOMING THREE DIMENSIONAL"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "davepolygonized",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "NOT THE LAB AGAIN"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "davepolygonized",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "PLEASE HELP ME BECOME 2D"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "davepolygonized",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "TAKE THE MICROPHONE AND RESTORE ME BACK TO THIS REALITY'S FORM"
+		},
+		{
+			"speed": 0.075,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "B-beep..?"
+		}
+	]
+}

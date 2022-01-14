@@ -1,0 +1,24 @@
+{
+	"position": [
+		60,
+		-20
+	],
+	"dialogue_pos": "left",
+	"scale": 0.85,
+	"image": "BambiAngry_Dialogue",
+	"animations": [
+		{
+			"idle_offsets": [
+				-1,
+				-11
+			],
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "talk",
+			"idle_name": "BFTalk",
+			"loop_name": "bftalkloop"
+		}
+	]
+}

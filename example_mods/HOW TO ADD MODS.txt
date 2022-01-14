@@ -1,0 +1,1 @@
+Just add them like a normal psych engine mod BUT add the songs to freeplaySongList.txt on assets/data

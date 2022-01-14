@@ -1,0 +1,24 @@
+{
+	"position": [
+		-80,
+		-40
+	],
+	"dialogue_pos": "right",
+	"scale": 0.95,
+	"image": "GFAnnoyed_Dialogue",
+	"animations": [
+		{
+			"idle_offsets": [
+				-1,
+				-11
+			],
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "talk",
+			"idle_name": "BFTalk",
+			"loop_name": "bftalkloop"
+		}
+	]
+}
