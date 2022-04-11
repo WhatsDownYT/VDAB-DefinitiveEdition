@@ -1,137 +1,137 @@
 {
 	"animations": [
 		{
+			"loop": true,
 			"offsets": [
 				-9,
 				10
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singLEFT-loop",
+			"fps": 24,
+			"name": "Dad Sing Note LEFT",
 			"indices": [
 				12,
 				13,
 				14,
 				15
-			],
-			"name": "Dad Sing Note LEFT"
+			]
 		},
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				27
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singRIGHT-loop",
+			"fps": 24,
+			"name": "Dad Sing Note RIGHT",
 			"indices": [
 				15,
 				16,
 				17,
 				18
-			],
-			"name": "Dad Sing Note RIGHT"
+			]
 		},
 		{
+			"loop": true,
 			"offsets": [
 				-6,
 				50
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singUP-loop",
+			"fps": 24,
+			"name": "Dad Sing Note UP",
 			"indices": [
 				56,
 				57,
 				58,
 				59
-			],
-			"name": "Dad Sing Note UP"
+			]
 		},
 		{
-			"loop": false,
 			"offsets": [
 				140,
 				-100
 			],
-			"anim": "hey",
+			"loop": false,
 			"fps": 24,
-			"name": "WhatYouKnowAboutRollingDownInTheDeep",
-			"indices": []
+			"anim": "hey",
+			"indices": [],
+			"name": "WhatYouKnowAboutRollingDownInTheDeep"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle-loop",
+			"loop": true,
 			"fps": 12,
-			"name": "Dave Idle",
+			"anim": "idle-loop",
 			"indices": [
 				11,
 				12,
 				13,
 				14
-			]
+			],
+			"name": "Dave Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-7,
 				-1
 			],
-			"anim": "singLEFT",
+			"indices": [],
 			"fps": 24,
-			"name": "Left",
-			"indices": []
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Left"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-13,
 				11
 			],
-			"anim": "singUP",
+			"indices": [],
 			"fps": 24,
-			"name": "Up",
-			"indices": []
+			"anim": "singUP",
+			"loop": false,
+			"name": "Up"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				-24
 			],
-			"anim": "singDOWN",
+			"indices": [],
 			"fps": 24,
-			"name": "Down",
-			"indices": []
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Down"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-28,
 				-13
 			],
-			"anim": "singRIGHT",
+			"indices": [],
 			"fps": 24,
-			"name": "Right",
-			"indices": []
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Right"
 		}
 	],
-	"no_antialiasing": true,
+	"no_antialiasing": false,
 	"image": "characters/Bambi_Splitathon",
 	"position": [
 		110,
@@ -140,9 +140,9 @@
 	"healthicon": "bambi",
 	"flip_x": false,
 	"healthbar_colors": [
-		0,
-		215,
-		20
+		12,
+		181,
+		0
 	],
 	"camera_position": [
 		0,

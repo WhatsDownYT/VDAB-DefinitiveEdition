@@ -1,0 +1,48 @@
+{
+	"storyName": "Is that bandu fro friday funkin?!?!?",
+	"hideFreeplay": false,
+	"weekBackground": "omgbandu",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "week6",
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"song1",
+			"bambi",
+			[
+				64,
+				89,
+				235
+			]
+		],
+		[
+			"Acquaintance",
+			"bambi",
+			[
+				64,
+				89,
+				235
+			]
+		],
+		[
+			"song3",
+			"bambi",
+			[
+				255,
+				0,
+				60
+			]
+		]
+	],
+	"weekName": "Bandu & Expunged Minions Week - Bambi's Purgatory"
+}

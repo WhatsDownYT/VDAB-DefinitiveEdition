@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				110,
+				-191
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				68,
+				-213
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Down"
+		},
+		{
+			"offsets": [
+				61,
+				-187
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Right"
+		},
+		{
+			"offsets": [
+				203,
+				-182
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Lefty"
+		},
+		{
+			"offsets": [
+				92,
+				-97
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Up"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/Jeff_Sprites",
+	"position": [
+		0,
+		100
+	],
+	"healthicon": "Jeff",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		214,
+		25
+	],
+	"camera_position": [
+		-170,
+		210
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -1,11 +1,10 @@
 {
 	"song": {
-		"sectionLengths": [],
 		"player1": "bf",
+		"sectionLengths": [],
+		"player2": "dave-3d",
 		"notes": [
 			{
-				"lengthInSteps": 160000,
-				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						0,
@@ -1683,12 +1682,24 @@
 						960
 					]
 				],
+				"typeOfSection": 0,
+				"lengthInSteps": 160000,
 				"altAnim": false,
-				"changeBPM": true,
+				"bpm": 250,
 				"mustHitSection": true,
+				"changeBPM": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
 				"bpm": 250
 			},
 			{
+				"gfSection": false,
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
@@ -1698,14 +1709,14 @@
 				"mustHitSection": true
 			}
 		],
-		"player2": "dave-3d",
 		"player3": "gf",
 		"song": "Furiosity",
+		"validScore": true,
+		"sections": 1,
 		"arrowSkin": "polynote",
 		"needsVoices": true,
-		"sections": 1,
-		"validScore": true,
-		"speed": 2.1,
-		"bpm": 250
+		"isSkinSep": true,
+		"bpm": 250,
+		"speed": 2.1
 	}
 }

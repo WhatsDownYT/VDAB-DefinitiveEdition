@@ -1,11 +1,10 @@
 {
 	"song": {
-		"sectionLengths": [],
 		"player1": "bf",
+		"sectionLengths": [],
+		"player2": "dave-3d",
 		"notes": [
 			{
-				"lengthInSteps": 160000,
-				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						10666,
@@ -8078,12 +8077,24 @@
 						250
 					]
 				],
+				"typeOfSection": 0,
+				"lengthInSteps": 160000,
 				"altAnim": false,
-				"changeBPM": true,
+				"bpm": 180,
 				"mustHitSection": true,
+				"changeBPM": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
 				"bpm": 180
 			},
 			{
+				"gfSection": false,
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
@@ -8093,14 +8104,13 @@
 				"mustHitSection": true
 			}
 		],
-		"player2": "dave-3d",
 		"player3": "gf",
 		"song": "Polygonized",
+		"validScore": true,
+		"sections": 1,
 		"stage": "3dRed",
 		"needsVoices": true,
-		"sections": 1,
-		"validScore": true,
-		"speed": 2.5,
-		"bpm": 180
+		"bpm": 180,
+		"speed": 2.5
 	}
 }

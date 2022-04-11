@@ -1,0 +1,48 @@
+{
+	"storyName": "Bambi's?????? Hell",
+	"hideFreeplay": false,
+	"weekBackground": "hell",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "week4",
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"Rebound",
+			"bambi",
+			[
+				64,
+				89,
+				235
+			]
+		],
+		[
+			"Disposition",
+			"bambi",
+			[
+				64,
+				89,
+				235
+			]
+		],
+		[
+			"Upheaval",
+			"bambi",
+			[
+				255,
+				0,
+				60
+			]
+		]
+	],
+	"weekName": "Hell Week - Bambi's Purgatory"
+}

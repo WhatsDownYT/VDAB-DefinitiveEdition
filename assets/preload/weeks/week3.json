@@ -1,6 +1,6 @@
 {
 	"storyName": "The Finale",
-	"hideFreeplay": false,
+	"hideFreeplay": true,
 	"weekBackground": "finale",
 	"weekBefore": "week2",
 	"freeplayColor": [

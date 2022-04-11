@@ -12,83 +12,30 @@ import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+#if MODS_ALLOWED
+import sys.FileSystem;
+import sys.io.File;
+#end
 import lime.utils.Assets;
 
 using StringTools;
 
 class CreditsState extends MusicBeatState
 {
-	var curSelected:Int = 1;
+	var curSelected:Int = -1;
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private var iconArray:Array<AttachedSprite> = [];
-
-	private static var creditsStuff:Array<Dynamic> = [ //Name - Icon name - Description - Link - BG Color, yourmother
-		['Dave & Bambi Original Mod'],
-		['Check it out by pressing enter!',		    'daveandbamber',			'Support the Original Mod!',			                            'https://gamebanana.com/mods/43201',	    0xFF613BE0],
-		[''],
-		['VDABDE + Purgatory Team'],
-		['WhatsDown',		    'whatsdown',			'Creator/Main Dev, Made most assets',			                            'https://www.youtube.com/channel/UCL3oNN5ss7sI8bHq8i9Unhg',	    0xFF613BE0],
-		['ztgds',		    'ztgds',			'Dev/Programmer & Made a few assets', 'https://www.youtube.com/channel/UCUmuZE0RPjvUhB036T6omfQ',	    0xFFFFA845],
-		['Voidsslime',	 'voidsslime',			'Artist/Playtester, Moral support',             'https://www.youtube.com/channel/UClS9epoMvsI8KWYnbc9Uc6Q',	    0xFFD153FF], // + being cool
-		[''],
-		['Contributors'],
-		['Pyramix',			'pyramix',			'Composed Reality Breaking and Technology, Purgatory Contributor',				                        'https://www.youtube.com/channel/UCPKFkbgvQ5_3ETVd3l75wAA',		    0xFFFF0000],
-		['Hortas',			'hortas',			'Composed a few songs, Purgatory Contributor',				                        'https://www.youtube.com/channel/UCvR1oxdjnB9hV-MLeH339Kg',		    0xFFFF0000], 
-		['Reginald Reborn',      'reg',	        'Made Charts for a few songs, Moral support, Purgatory Contributor',                   '',		0xFFFF0000],
-		['ShredBoi',			'shredboi',			'Composed Disposition, Purgatory Contributor',				                        'https://www.youtube.com/channel/UCcPW37b_Gb_j0CG3U1B89YQ',		    0xFFFF0000], // holy shit disposition is such a banger i loveit
-		['rapparep lol',      'rapparep',	        'Made Gary sprites, Moral support, Purgatory Contributor',                   'https://www.youtube.com/c/rappareplol',		0xFFFF0000],
-		['CyndaquilDAC',      'cynda',	        'Programmed a few additions, Composed Supplanted, Made 2d God Bambi & Joke Bambi Remastered Sprites',                   'https://www.youtube.com/channel/UCTaq4jni33NoaI1TfMXCRcA',		0xFFFF0000],
-		['Maevings',      'maevings',	        'Composed Opposition, Purgatory Contributor',                   'https://www.youtube.com/c/Maevings',		0xFFFF0000],
-		['Memory_001',			'memory',			'Created Bambi Corrupt Sprites, Purgatory Contributor',				                        '',		    0xFFFF0000],
-		['Lancey',			'lancey',			'Applecore Artist, Created 3D Bambi God Sprites',				                        'https://www.youtube.com/c/Lancey170',		    0xFFFF0000], 
-		['Grantare',			'grantare',			'Helped with the Alt Notes for Devastation (Coming Soon!), Purgatory Contributor',				                        'https://www.youtube.com/c/Grantare',		    0xFFFF0000], 
-		['Gael',			'gael',			'Created some icons, Purgatory Contributor',				                        '',		    0xFFFF0000], 
-		['NewPlayer',			'newplayer',			'Playtester, Hellscape Original Owner, Purgatory Contributor',				                        'https://www.youtube.com/channel/UCqxtnCuemVF_EXK7P0Mo3lw',		    0xFFFF0000],
-		['That Pizza Tower Fan',      'tptf',	        "Composed Screwed",                   'https://www.youtube.com/c/ThatPizzaTowerFan',		0xFFFF0000],
-		['Alexander Cooper 19',           'alexandercooper',			'Composed Mealie, Purgatory Contributor',                     'https://www.youtube.com/channel/UCNz20AHJq41rkBUsq8RmUfQ',		0xFFFF0000],
-		['TheBuilderXD',			'tb',			'Created some icons, Purgatory Contributor',				                        '',		    0xFFFF0000], 
-		[''],
-		['Vs Dave And Bambi Team'],
-		['  MoldyGH',			'nothing',			'Creator/Main Dev',				                        'https://www.youtube.com/channel/UCHIvkOUDfbMCv-BEIPGgpmA',		    0xFFFF0000],
-		['  MissingTextureMan101','nothing',	  	'Secondary Dev',				                        'https://www.youtube.com/channel/UCCJna2KG54d1604L2lhZINQ',	0xFFFF0000],
-		['  rapparep lol',      'nothing',			'Main Artist',				                            'https://www.youtube.com/channel/UCKfdkmcdFftv4pFWr0Bh45A',		0xFFFF0000],
-		['  TheBuilderXD',      'nothing',			'Page Manager, Tristan Sprite Creator, and more',       'https://www.youtube.com/user/99percentMember',		0xFFFF0000],
-		['  Erizur',            'nothing',			'Programmer, Week Icon Artist',                       'https://www.youtube.com/channel/UCdCAaQzt9yOGfFM0gJDJ4bQ',		0xFFFF0000], // ñ
-		['  T5mpler',           'nothing',			'Dev/Programmer & Supporter',                           'https://www.youtube.com/channel/UCgNoOsE_NDjH6ac4umyADrw',		0xFFFF0000],
-		['  CyndaquilDAC',      'nothing',	        'Contributor & Programmed a few new additions',                   'https://www.youtube.com/channel/UCTaq4jni33NoaI1TfMXCRcA',		0xFFFF0000], 
-		['  Stats45',           'nothing',			'Minor programming, Moral support',                     'https://www.youtube.com/channel/UClb4YjR8i74G-ue2nyiH2DQ',		0xFFFF0000],
-		['  Alexander Cooper 19',           'nothing',			'Mealie song, Beta Tester',                     'https://www.youtube.com/channel/UCNz20AHJq41rkBUsq8RmUfQ',		0xFFFF0000],
-		['  Zmac',           'nothing',			'3D Background, Intro text help, EMFNF2 help',                     'https://www.youtube.com/channel/UCl50Xru1nLBENuLiQBt6VRg',		0xFFFF0000],
-		[''],
-		['Psych Engine Team'],
-		['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',						'https://twitter.com/Shadow_Mario_',	0xFFFF0000],
-		['RiverOaken',			'riveroaken',		'Main Artist/Animator of Psych Engine',					'https://twitter.com/river_oaken',		0xFFC30085],
-		['bb-panzu',			'bb-panzu',			'Additional Programmer of Psych Engine',				'https://twitter.com/bbsub3',			0xFFFF0000],
-		[''],
-		['Psych Engine Contributors'],
-		['shubs',				'shubs',			'New Input System Programmer',							'https://twitter.com/yoshubs',			0xFFFF0000],
-		['SqirraRNG',			'gedehari',			'Chart Editor\'s Sound Waveform base',					'https://twitter.com/gedehari',			0xFFFF0000],
-		['iFlicky',				'iflicky',			'Delay/Combo Menu Song Composer\nand Dialogue Sounds',	'https://twitter.com/flicky_i',			0xFFFF0000],
-		['PolybiusProxy',		'polybiusproxy',	'.MP4 Video Loader Extension',							'https://twitter.com/polybiusproxy',	0xFFFF0000],
-		['Keoiki',				'keoiki',			'Note Splash Animations',								'https://twitter.com/Keoiki_',			0xFFFF0000],
-		[''],
-		["Funkin' Crew"],
-		['ninjamuffin99',		'ninjamuffin99',	"Programmer of Friday Night Funkin'",				'https://twitter.com/ninja_muffin99',	0xFFF73838],
-		['PhantomArcade',		'phantomarcade',	"Animator of Friday Night Funkin'",					'https://twitter.com/PhantomArcade3K',	0xFFFFBB1B],
-		['evilsk8r',			'evilsk8r',			"Artist of Friday Night Funkin'",					'https://twitter.com/evilsk8r',			0xFF53E52C],
-		['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",					'https://twitter.com/kawaisprite',		0xFF6475F3],
-		[''],
-		['Special Thanks'],
-		['mayo78',				'the',			'For creating a guide to separate BFs arrow skin from the CPUs arrow skin.',							'https://github.com/mayo78',			0xFFFF0000],
-		['itsCapp',				'the',			'For creating a event to move the arrows.',							'https://github.com/ShadowMario/FNF-PsychEngine/discussions/893',			0xFFFF0000],
-		['Punkinator7',				'the',			'For Creating a LUA script for custom notes and events.',							'https://gamebanana.com/members/1687904',			0xFFFF0000]
-	];
+	private var creditsStuff:Array<Array<String>> = [];
 
 	var bg:FlxSprite;
 	var descText:FlxText;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
+	var descBox:AttachedSprite;
+
+	var offsetThing:Float = -75;
 
 	override function create()
 	{
@@ -97,18 +44,143 @@ class CreditsState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
+		persistentUpdate = true;
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		add(bg);
-
+		bg.screenCenter();
+		
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
 
+		#if MODS_ALLOWED
+		var path:String = SUtil.getPath() + 'modsList.txt';
+		if(FileSystem.exists(path))
+		{
+			var leMods:Array<String> = CoolUtil.coolTextFile(path);
+			for (i in 0...leMods.length)
+			{
+				if(leMods.length > 1 && leMods[0].length > 0) {
+					var modSplit:Array<String> = leMods[i].split('|');
+					if(!Paths.ignoreModFolders.contains(modSplit[0].toLowerCase()) && !modsAdded.contains(modSplit[0]))
+					{
+						if(modSplit[1] == '1')
+							pushModCreditsToList(modSplit[0]);
+						else
+							modsAdded.push(modSplit[0]);
+					}
+				}
+			}
+		}
+
+		var arrayOfFolders:Array<String> = Paths.getModDirectories();
+		arrayOfFolders.push('');
+		for (folder in arrayOfFolders)
+		{
+			pushModCreditsToList(folder);
+		}
+		#end
+
+		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color // basically using 'yea' when i dunno what to make for an icon
+			['The Dave & Bambi Original Mod'],
+			['Check it out by pressing enter!',		    'daveandbamber',			'Go support the Original Mod!',			                            'https://gamebanana.com/mods/43201',	    '613BE0'],
+			[''],
+			["VS. D&B DE + Bambi's Purgatory Team"],
+			['WhatsDown',		    'whatsdown',			'Creator/Main Dev, 3D Models, Made most assets',			                            'https://www.youtube.com/channel/UCL3oNN5ss7sI8bHq8i9Unhg',	    '444444'],
+			['ztgds',		    'ztgds',			'Dev/Programmer & Made a few assets', 'https://www.youtube.com/channel/UCUmuZE0RPjvUhB036T6omfQ',	    '444444'],
+			['MijaeLio',			'yea',			'Dev/Programmer',				                        'https://www.youtube.com/channel/UCdgtyJhD7SQQzD4nsxWbb8A',		    '444444'], 
+			['Voidsslime',	 'voidsslime',			'Artist/Playtester, Moral support',             'https://www.youtube.com/channel/UClS9epoMvsI8KWYnbc9Uc6Q',	    '444444'], 
+			['BombasticHype',	 'yea',			'Artist/Animator',             'https://www.youtube.com/c/BombasticHype',	  '444444'], 
+			['Villezen',				'yea',			'Musician & Helped with some stuff',							'https://www.youtube.com/c/Villezen',			'444444'], 
+			['BezieAnims',      'bezie',	        'Charted Supplanted\nAnimator and Musician',                   'https://www.youtube.com/c/BezieAnimations',		'444444'], 
+			['Pyramix',			'pyramix',			'Musician',				                        'https://www.youtube.com/channel/UCPKFkbgvQ5_3ETVd3l75wAA',		   '444444'], 
+			['Hortas',			'hortas',			'Musician',				                        'https://www.youtube.com/channel/UCvR1oxdjnB9hV-MLeH339Kg',		   '444444'], 
+			['EpicRandomness11',			'yea',			'Musician',				                        '',		    '444444'], 
+			['Reginald Reborn',      'reg',	        'Charter, Moral support',                   '',		'444444'], 
+			[''],
+			['Contributors'],
+			['NewReal',           'yea',			'Bombu and Bamburg creator',                     'https://www.youtube.com/channel/UCl50Xru1nLBENuLiQBt6VRg',		'444444'], 
+			['randy the slope',			'yea',			'Composed Fast Food',				                        'https://www.youtube.com/channel/UCUMJQBdCWq6XDUOIVMkVXKw',		    '444444'], 
+			['Aadsta',			'yea',			'Composed Acquaintance',				                        'https://www.youtube.com/c/AadstaPinwheel',		    '444444'], 
+			['Lancey',			'lancey',			'Bandu Creator, Applecore Assets Artist\n3D Notes & Created 3D Bambi God Sprites',				                        'https://www.youtube.com/c/Lancey170',		    '444444'],  
+			['Cynda',      'cynda',	        'Composed Supplanted V1 and the BP Menu Theme & Made Joke Bambi Remastered Sprites\n& Coded some additions',                   'https://www.youtube.com/channel/UCTaq4jni33NoaI1TfMXCRcA',		'444444'], 
+			['ReeVrze',			'yea',			'Insane difficulty Charter, FunkyBeats Dev',				                        'https://www.youtube.com/channel/UCSCG_msje1Cs8btvHLVzNgA',		    '444444'],  
+			['Zmac',           'zmac',			'Created the Bamburg 3D Background',                     'https://www.youtube.com/channel/UCl50Xru1nLBENuLiQBt6VRg',		'444444'], 
+			['Xav',			'yea',			'Creator of mustard',				                        '',		    '444444'],  
+			['rapparep lol',      'rapparep',	        'Made Gary sprites, Helped with Hell Expunged\nMoral support, mmrapparep lol',                   'https://www.youtube.com/c/rappareplol',		'444444'], 
+			['Billy Bobbo',      'holyshittheboss',	        "Suggested some ideas",                   '',		'444444'], 
+			['Memory_001',			'memory',			'Created Bambi Corrupt Sprites',				                        '',		    '444444'], 
+			['Ruby',			'yea',			'', /*whatsdown if ur seeing this can you put the description cuz i forgot oops  pl e ase*/		                        'https://www.youtube.com/channel/UC0hOZhKqUVAng_jh3Sl9Uhw',		    '444444'],  
+			['Grantare',			'grantare',			'Helped with the Alt Notes for Devastation',				                        'https://www.youtube.com/c/Grantare',		    '444444'],  
+			['Gael',			'gael',			'Created some icons',				                        '',		    '444444'],  
+			['Alexander Cooper 19',           'alexandercooper',			'Composed Mealie, Helped with his icon',                     'https://www.youtube.com/channel/UCNz20AHJq41rkBUsq8RmUfQ',		'444444'], 
+			['TheBuilderXD',			'tb',			'Created some icons, Corn Note Concept',				                        '',		    '444444'],  
+			['isaaclul',			'yea',			'Created one of the menu backgrounds',				                        '',		    '444444'],  
+			['voltrex',			'yea',			'Created one of the menu backgrounds',				                        '',		    '444444'],  
+			['osp',			'yea',			'Created one of the menu backgrounds',				                        '',		    '444444'],  
+			['SlushX',			'yea',			'Created one of the menu backgrounds',				                        '',		    '444444'],  
+			['darlyboxman/peejeada j.r.',			'yea',			'Created one of the menu backgrounds',				                        '',		    '444444'],  
+			['NewPlayer',			'newplayer',			'Playtester',				                        'https://www.youtube.com/channel/UCqxtnCuemVF_EXK7P0Mo3lw',		    '444444'], 
+			['normalbasics93',			'yea',			'Playtester',				                        'https://www.youtube.com/channel/UC21TRNz6llg8a6-ur4dSBtw',		    '444444'], 
+			['RodriX',			'yea',			'Playtester',				                        'https://www.youtube.com/channel/UCzQM6rrim_Xj-SQ_w6uVBDA',		    '444444'], 
+			['Samuran',			'yea',			'Playtester',				                        '',		    '444444'], 
+			['Log Man',			'yea',			'Playtester',				                        'https://www.youtube.com/channel/UCnGg-cLnXuQNfSzIq6xF8hw',		    '444444'], 
+			['theloser',			'yea',			'Playtester',				                        'https://www.youtube.com/channel/UCByP_e5Wn01sg0CpNufT4Dw',		    '444444'], 
+			['Howerev',			'yea',			'Playtester',				                        'https://www.youtube.com/channel/UCAXyC1vq-z4GHEJehAP2Jyg',		    '444444'], 
+			['JP1619',			'yea',			'Playtester',				                        'https://www.youtube.com/channel/UCSGntFGRbEmiLUmooB2EROw',		    '444444'], 
+			[''],
+			['Vs Dave And Bambi Team'],
+			['MoldyGH',			'moldygh',			'Creator/Main Dev',				                        'https://www.youtube.com/channel/UCHIvkOUDfbMCv-BEIPGgpmA',		    '444444'], 
+			['MissingTextureMan101','missingtexture',	  	'Secondary Dev',				                        'https://www.youtube.com/channel/UCCJna2KG54d1604L2lhZINQ',	'444444'], 
+			['rapparep lol',      'rapparep',			'Main Artist',				                            'https://www.youtube.com/channel/UCKfdkmcdFftv4pFWr0Bh45A',		'444444'], 
+			['TheBuilderXD',      'tb',			'Page Manager, Tristan Sprite Creator, and more',       'https://www.youtube.com/user/99percentMember',		'444444'], 
+			['Erizur',            'erizur',			'Programmer, Week Icon Artist',                       'https://www.youtube.com/channel/UCdCAaQzt9yOGfFM0gJDJ4bQ',		'444444'],  
+			['T5mpler',           't5',			'Dev/Programmer & Supporter',                           'https://www.youtube.com/channel/UCgNoOsE_NDjH6ac4umyADrw',		'444444'], 
+			['Stats45',           'yea',			'Minor programming, Moral support',                     'https://www.youtube.com/channel/UClb4YjR8i74G-ue2nyiH2DQ',		'444444'], 
+			['Alexander Cooper 19',           'alexandercooper',			'Mealie song, Beta Tester',                     'https://www.youtube.com/channel/UCNz20AHJq41rkBUsq8RmUfQ',		'444444'], 
+			['Zmac',           'zmac',			'3D Background, Intro text help, EMFNF2 help',                     'https://www.youtube.com/channel/UCl50Xru1nLBENuLiQBt6VRg',		'444444'], 
+			[''],
+			['Psych Engine Team'],
+			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',							'https://twitter.com/Shadow_Mario_',	'444444'],
+			['RiverOaken',			'riveroaken',		'Main Artist/Animator of Psych Engine',						'https://twitter.com/RiverOaken',		'C30085'],
+			['shubs',				'shubs',			'Additional Programmer of Psych Engine',					'https://twitter.com/yoshubs',			'279ADC'],
+			[''],
+			['Former Engine Members'],
+			['bb-panzu',			'bb-panzu',			'Ex-Programmer of Psych Engine',							'https://twitter.com/bbsub3',			'389A58'],
+			[''],
+			['Engine Contributors'],
+			['iFlicky',				'iflicky',			'Composer of Psync and Tea Time\nMade the Dialogue Sounds',	'https://twitter.com/flicky_i',			'AA32FE'],
+			['SqirraRNG',			'gedehari',			'Chart Editor\'s Sound Waveform base',						'https://twitter.com/gedehari',			'FF9300'],
+			['PolybiusProxy',		'polybiusproxy',	'.MP4 Video Loader Extension',								'https://twitter.com/polybiusproxy',	'FFEAA6'],
+			['Keoiki',				'keoiki',			'Note Splash Animations',									'https://twitter.com/Keoiki_',			'FFFFFF'],
+			['Smokey',				'smokey',			'Spritemap Texture Support',								'https://twitter.com/Smokey_5_',		'4D5DBD'],
+			[''],
+			["Funkin' Crew"],
+			['ninjamuffin99',		'ninjamuffin99',	"Programmer of Friday Night Funkin'",						'https://twitter.com/ninja_muffin99',	'F73838'],
+			['PhantomArcade',		'phantomarcade',	"Animator of Friday Night Funkin'",							'https://twitter.com/PhantomArcade3K',	'FFBB1B'],
+			['evilsk8r',			'evilsk8r',			"Artist of Friday Night Funkin'",							'https://twitter.com/evilsk8r',			'53E52C'],
+			['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",							'https://twitter.com/kawaisprite',		'6475F3'],
+			[''],
+			['Psych Engine Android Port'],
+			['Saw (M.A. Jigsaw)','saw','Main Coder of the\nPsych Engine Android Port','https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', 'F73838'],
+			[''],
+			['Special Thanks'],
+			['mayo78',				'yea',			'For creating a guide to separate BFs arrow skin from the CPUs arrow skin.',							'https://github.com/mayo78',			'444444'], 
+			['itsCapp',				'yea',			'For creating a event to move the arrows.',							'https://github.com/ShadowMario/FNF-PsychEngine/discussions/893',			'444444'], 
+			['Punkinator7',				'yea',			'For Creating some LUA scripts for custom notes and events.',							'https://gamebanana.com/members/1687904',			'444444'], 
+			['Vs Dave And Bambi\nGolden Apple Edition',		    'daveandbamber',			'Original apparation of Bandu, Badai and the 3D note assets',			                            'https://gamebanana.com/mods/343129',	    '613BE0']
+		];
+		
+		for(i in pisspoop){
+			creditsStuff.push(i);
+		}
+	
 		for (i in 0...creditsStuff.length)
 		{
 			var isSelectable:Bool = !unselectableCheck(i);
 			var optionText:Alphabet = new Alphabet(0, 70 * i, creditsStuff[i][0], !isSelectable, false);
 			optionText.isMenuItem = true;
 			optionText.screenCenter(X);
+			optionText.yAdd -= 70;
 			if(isSelectable) {
 				optionText.x -= 70;
 			}
@@ -118,6 +190,11 @@ class CreditsState extends MusicBeatState
 			grpOptions.add(optionText);
 
 			if(isSelectable) {
+				if(creditsStuff[i][5] != null)
+				{
+					Paths.currentModDirectory = creditsStuff[i][5];
+				}
+
 				var icon:AttachedSprite = new AttachedSprite('credits/' + creditsStuff[i][1]);
 				icon.xAdd = optionText.width + 10;
 				icon.sprTracker = optionText;
@@ -125,21 +202,40 @@ class CreditsState extends MusicBeatState
 				// using a FlxGroup is too much fuss!
 				iconArray.push(icon);
 				add(icon);
+				Paths.currentModDirectory = '';
+
+				if(curSelected == -1) curSelected = i;
 			}
 		}
+		
+		descBox = new AttachedSprite();
+		descBox.makeGraphic(1, 1, FlxColor.BLACK);
+		descBox.xAdd = -10;
+		descBox.yAdd = -10;
+		descBox.alphaMult = 0.6;
+		descBox.alpha = 0.6;
+		add(descBox);
 
-		descText = new FlxText(50, 600, 1180, "", 32);
-		descText.setFormat(Paths.font("comic-sans.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		descText = new FlxText(50, FlxG.height + offsetThing - 25, 1180, "", 32);
+		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER/*, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK*/);
 		descText.scrollFactor.set();
-		descText.borderSize = 2.4;
+		//descText.borderSize = 2.4;
+		descBox.sprTracker = descText;
 		add(descText);
 
-		bg.color = creditsStuff[curSelected][4];
+		bg.color = getCurrentBGColor();
 		intendedColor = bg.color;
 		changeSelection();
+
+        #if android
+        addVirtualPad(UP_DOWN, A_B);
+        #end
+
 		super.create();
 	}
 
+	var quitting:Bool = false;
+	var holdTime:Float = 0;
 	override function update(elapsed:Float)
 	{
 		if (FlxG.sound.music.volume < 0.7)
@@ -147,32 +243,77 @@ class CreditsState extends MusicBeatState
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
 
-		var upP = controls.UI_UP_P;
-		var downP = controls.UI_DOWN_P;
+		if(!quitting)
+		{
+			if(creditsStuff.length > 1)
+			{
+				var shiftMult:Int = 1;
+				if(FlxG.keys.pressed.SHIFT) shiftMult = 3;
 
-		if (upP)
-		{
-			changeSelection(-1);
-		}
-		if (downP)
-		{
-			changeSelection(1);
-		}
+				var upP = controls.UI_UP_P;
+				var downP = controls.UI_DOWN_P;
 
-		if (controls.BACK)
-		{
-			if(colorTween != null) {
-				colorTween.cancel();
+				if (upP)
+				{
+					changeSelection(-1 * shiftMult);
+					holdTime = 0;
+				}
+				if (downP)
+				{
+					changeSelection(1 * shiftMult);
+					holdTime = 0;
+				}
+
+				if(controls.UI_DOWN || controls.UI_UP)
+				{
+					var checkLastHold:Int = Math.floor((holdTime - 0.5) * 10);
+					holdTime += elapsed;
+					var checkNewHold:Int = Math.floor((holdTime - 0.5) * 10);
+
+					if(holdTime > 0.5 && checkNewHold - checkLastHold > 0)
+					{
+						changeSelection((checkNewHold - checkLastHold) * (controls.UI_UP ? -shiftMult : shiftMult));
+					}
+				}
 			}
-			FlxG.sound.play(Paths.sound('cancelMenu'));
-			MusicBeatState.switchState(new MainMenuState());
+
+			if(controls.ACCEPT) {
+				CoolUtil.browserLoad(creditsStuff[curSelected][3]);
+			}
+			if (controls.BACK)
+			{
+				if(colorTween != null) {
+					colorTween.cancel();
+				}
+				FlxG.sound.play(Paths.sound('cancelMenu'));
+				MusicBeatState.switchState(new MainMenuState());
+				quitting = true;
+			}
 		}
-		if(controls.ACCEPT) {
-			CoolUtil.browserLoad(creditsStuff[curSelected][3]);
+		
+		for (item in grpOptions.members)
+		{
+			if(!item.isBold)
+			{
+				var lerpVal:Float = CoolUtil.boundTo(elapsed * 12, 0, 1);
+				if(item.targetY == 0)
+				{
+					var lastX:Float = item.x;
+					item.screenCenter(X);
+					item.x = FlxMath.lerp(lastX, item.x - 70, lerpVal);
+					item.forceX = item.x;
+				}
+				else
+				{
+					item.x = FlxMath.lerp(item.x, 200 + -40 * Math.abs(item.targetY), lerpVal);
+					item.forceX = item.x;
+				}
+			}
 		}
 		super.update(elapsed);
 	}
 
+	var moveTween:FlxTween = null;
 	function changeSelection(change:Int = 0)
 	{
 		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
@@ -184,7 +325,7 @@ class CreditsState extends MusicBeatState
 				curSelected = 0;
 		} while(unselectableCheck(curSelected));
 
-		var newColor:Int = creditsStuff[curSelected][4];
+		var newColor:Int =  getCurrentBGColor();
 		if(newColor != intendedColor) {
 			if(colorTween != null) {
 				colorTween.cancel();
@@ -211,7 +352,48 @@ class CreditsState extends MusicBeatState
 				}
 			}
 		}
+
 		descText.text = creditsStuff[curSelected][2];
+		descText.y = FlxG.height - descText.height + offsetThing - 60;
+
+		if(moveTween != null) moveTween.cancel();
+		moveTween = FlxTween.tween(descText, {y : descText.y + 75}, 0.25, {ease: FlxEase.sineOut});
+
+		descBox.setGraphicSize(Std.int(descText.width + 20), Std.int(descText.height + 25));
+		descBox.updateHitbox();
+	}
+
+	#if MODS_ALLOWED
+	private var modsAdded:Array<String> = [];
+	function pushModCreditsToList(folder:String)
+	{
+		if(modsAdded.contains(folder)) return;
+
+		var creditsFile:String = null;
+		if(folder != null && folder.trim().length > 0) creditsFile = Paths.mods(folder + '/data/credits.txt');
+		else creditsFile = Paths.mods('data/credits.txt');
+
+		if (FileSystem.exists(creditsFile))
+		{
+			var firstarray:Array<String> = File.getContent(creditsFile).split('\n');
+			for(i in firstarray)
+			{
+				var arr:Array<String> = i.replace('\\n', '\n').split("::");
+				if(arr.length >= 5) arr.push(folder);
+				creditsStuff.push(arr);
+			}
+			creditsStuff.push(['']);
+		}
+		modsAdded.push(folder);
+	}
+	#end
+
+	function getCurrentBGColor() {
+		var bgColor:String = creditsStuff[curSelected][4];
+		if(!bgColor.startsWith('0x')) {
+			bgColor = '0xFF' + bgColor;
+		}
+		return Std.parseInt(bgColor);
 	}
 
 	private function unselectableCheck(num:Int):Bool {

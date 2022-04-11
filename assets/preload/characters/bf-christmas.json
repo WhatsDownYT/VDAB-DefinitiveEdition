@@ -3,17 +3,6 @@
 		{
 			"loop": false,
 			"offsets": [
-				-3,
-				-1
-			],
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "BF idle dance"
-		},
-		{
-			"loop": false,
-			"offsets": [
 				12,
 				-6
 			],
@@ -80,7 +69,7 @@
 		{
 			"loop": false,
 			"offsets": [
-				-29,
+				-28,
 				27
 			],
 			"fps": 24,
@@ -109,6 +98,17 @@
 			"anim": "hey",
 			"indices": [],
 			"name": "BF HEY"
+		},
+		{
+			"offsets": [
+				-3,
+				-1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "BF idle dance"
 		}
 	],
 	"no_antialiasing": false,
@@ -117,12 +117,12 @@
 		0,
 		350
 	],
-	"healthicon": "bf",
+	"healthicon": "bf-christmasyey",
 	"flip_x": true,
 	"healthbar_colors": [
-		49,
-		176,
-		209
+		235,
+		83,
+		76
 	],
 	"camera_position": [
 		0,

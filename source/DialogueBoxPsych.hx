@@ -2,7 +2,6 @@ package;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.tweens.FlxTween;
 import flixel.addons.text.FlxTypeText;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxSpriteGroup;
@@ -24,6 +23,7 @@ using StringTools;
 typedef DialogueCharacterFile = {
 	var image:String;
 	var dialogue_pos:String;
+	var no_antialiasing:Bool;
 
 	var animations:Array<DialogueAnimArray>;
 	var position:Array<Float>;
@@ -50,6 +50,7 @@ typedef DialogueLine = {
 	var text:Null<String>;
 	var boxState:Null<String>;
 	var speed:Null<Float>;
+	var sound:Null<String>;
 }
 
 class DialogueCharacter extends FlxSprite
@@ -68,18 +69,10 @@ class DialogueCharacter extends FlxSprite
 	public var startingPos:Float = 0; //For center characters, it works as the starting Y, for everything else it works as starting X
 	public var isGhost:Bool = false; //For the editor
 	public var curCharacter:String = 'bf';
-
+	public var skiptimer = 0;
+	public var skipping = 0;
 	public function new(x:Float = 0, y:Float = 0, character:String = null)
 	{
-		switch (PlayState.SONG.song.toLowerCase())
-		{
-			case 'insanity' | 'blocked' | 'corn-theft' | 'splitathon' :
-				FlxG.sound.playMusic(Paths.music('a-new-day'), 0);
-				FlxG.sound.music.fadeIn(1, 0, 0.8);
-			case 'furiosity' | 'polygonized' | 'cheating' | 'unfairness':
-				FlxG.sound.playMusic(Paths.music('im-angey'), 0);
-				FlxG.sound.music.fadeIn(1, 0, 0.8);
-		}
 		super(x, y);
 
 		if(character == null) character = DEFAULT_CHARACTER;
@@ -88,6 +81,9 @@ class DialogueCharacter extends FlxSprite
 		reloadCharacterJson(character);
 		frames = Paths.getSparrowAtlas('dialogue/' + jsonFile.image);
 		reloadAnimations();
+
+		antialiasing = ClientPrefs.globalAntialiasing;
+		if(jsonFile.no_antialiasing == true) antialiasing = false;
 	}
 
 	public function reloadCharacterJson(character:String) {
@@ -97,11 +93,11 @@ class DialogueCharacter extends FlxSprite
 		#if MODS_ALLOWED
 		var path:String = Paths.modFolders(characterPath);
 		if (!FileSystem.exists(path)) {
-			path = Paths.getPreloadPath(characterPath);
+			path = SUtil.getPath() + Paths.getPreloadPath(characterPath);
 		}
 
 		if(!FileSystem.exists(path)) {
-			path = Paths.getPreloadPath('images/dialogue/' + DEFAULT_CHARACTER + '.json');
+			path = SUtil.getPath() + Paths.getPreloadPath('images/dialogue/' + DEFAULT_CHARACTER + '.json');
 		}
 		rawJson = File.getContent(path);
 
@@ -184,11 +180,23 @@ class DialogueBoxPsych extends FlxSpriteGroup
 	var offsetPos:Float = -600;
 
 	var textBoxTypes:Array<String> = ['normal', 'angry'];
+	
+	var curCharacter:String = "";
 	//var charPositionList:Array<String> = ['left', 'center', 'right'];
 
 	public function new(dialogueList:DialogueFile, ?song:String = null)
 	{
 		super();
+
+		switch (PlayState.SONG.song.toLowerCase())
+		{
+			case 'house' | 'insanity' | 'blocked' | 'corn-theft' | 'maze' | 'splitathon' | 'shattered' | 'supplanted':
+				FlxG.sound.playMusic(Paths.music('a-new-day'), 0);
+				FlxG.sound.music.fadeIn(1, 0, 0.8);
+			case 'furiosity' | 'polygonized' | 'cheating' | 'unfairness' | 'reality-breaking' | 'disposition':
+				FlxG.sound.playMusic(Paths.music('im-angey'), 0);
+				FlxG.sound.music.fadeIn(1, 0, 0.8);
+		}
 
 		if(song != null && song != '') {
 			FlxG.sound.playMusic(Paths.music(song), 0);
@@ -251,12 +259,10 @@ class DialogueBoxPsych extends FlxSpriteGroup
 			var x:Float = LEFT_CHAR_X;
 			var y:Float = DEFAULT_CHAR_Y;
 			var char:DialogueCharacter = new DialogueCharacter(x + offsetPos, y, individualChar);
-
 			char.setGraphicSize(Std.int(char.width * DialogueCharacter.DEFAULT_SCALE * char.jsonFile.scale));
 			char.updateHitbox();
-			char.antialiasing = ClientPrefs.globalAntialiasing;
 			char.scrollFactor.set();
-			char.alpha = 0;
+			char.alpha = 0.00001;
 			add(char);
 
 			var saveY:Bool = false;
@@ -284,13 +290,32 @@ class DialogueBoxPsych extends FlxSpriteGroup
 	public static var DEFAULT_TEXT_Y = 430;
 	var scrollSpeed = 4500;
 	var daText:Alphabet = null;
+	var ignoreThisFrame:Bool = true; //First frame is reserved for loading dialogue images
 	override function update(elapsed:Float)
 	{
+		if(ignoreThisFrame) {
+			ignoreThisFrame = false;
+			super.update(elapsed);
+			return;
+		}
+
 		if(!dialogueEnded) {
 			bgFade.alpha += 0.5 * elapsed;
 			if(bgFade.alpha > 0.5) bgFade.alpha = 0.5;
 
-			if(PlayerSettings.player1.controls.ACCEPT) {
+		    #if android
+            var justTouched:Bool = false;
+
+		    for (touch in FlxG.touches.list)
+		    {
+			    if (touch.justPressed)
+			    {
+			    	justTouched = true;
+			    }
+		    }
+		    #end
+
+			if(PlayerSettings.player1.controls.ACCEPT #if android || justTouched #end) {
 				if(!daText.finishedText) {
 					if(daText != null) {
 						daText.killTheTimer();
@@ -370,7 +395,7 @@ class DialogueBoxPsych extends FlxSpriteGroup
 									if(char.x > char.startingPos - offsetPos) char.x = char.startingPos - offsetPos;
 							}
 							char.alpha -= 3 * elapsed;
-							if(char.alpha < 0) char.alpha = 0;
+							if(char.alpha < 0.00001) char.alpha = 0.00001;
 						} else {
 							switch(char.jsonFile.dialogue_pos) {
 								case 'left':
@@ -491,6 +516,7 @@ class DialogueBoxPsych extends FlxSpriteGroup
 		}
 
 		textToType = curDialogue.text;
+		Alphabet.setDialogueSound(curDialogue.sound);
 		daText = new Alphabet(DEFAULT_TEXT_X, DEFAULT_TEXT_Y, textToType, false, true, curDialogue.speed, 0.7);
 		add(daText);
 
@@ -513,11 +539,12 @@ class DialogueBoxPsych extends FlxSpriteGroup
 
 	public static function parseDialogue(path:String):DialogueFile {
 		#if MODS_ALLOWED
-		var rawJson = File.getContent(path);
-		#else
-		var rawJson = Assets.getText(path);
+		if(FileSystem.exists(path))
+		{
+			return cast Json.parse(File.getContent(path));
+		}
 		#end
-		return cast Json.parse(rawJson);
+		return cast Json.parse(Assets.getText(path));
 	}
 
 	public static function updateBoxOffsets(box:FlxSprite) { //Had to make it static because of the editors

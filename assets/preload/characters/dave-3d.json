@@ -1,134 +1,134 @@
 {
 	"animations": [
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				10
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singLEFT-loop",
+			"fps": 24,
+			"name": "Dad Sing Note LEFT",
 			"indices": [
 				12,
 				13,
 				14,
 				15
-			],
-			"name": "Dad Sing Note LEFT"
+			]
 		},
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				27
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singRIGHT-loop",
+			"fps": 24,
+			"name": "Dad Sing Note RIGHT",
 			"indices": [
 				15,
 				16,
 				17,
 				18
-			],
-			"name": "Dad Sing Note RIGHT"
+			]
 		},
 		{
+			"loop": true,
 			"offsets": [
 				-6,
 				50
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singUP-loop",
+			"fps": 24,
+			"name": "Dad Sing Note UP",
 			"indices": [
 				56,
 				57,
 				58,
 				59
-			],
-			"name": "Dad Sing Note UP"
+			]
 		},
 		{
-			"loop": false,
 			"offsets": [
 				140,
 				-100
 			],
-			"anim": "hey",
+			"loop": false,
 			"fps": 24,
-			"name": "WhatYouKnowAboutRollingDownInTheDeep",
-			"indices": []
+			"anim": "hey",
+			"indices": [],
+			"name": "WhatYouKnowAboutRollingDownInTheDeep"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle-loop",
+			"loop": true,
 			"fps": 12,
-			"name": "Dave Idle",
+			"anim": "idle-loop",
 			"indices": [
 				10,
 				11,
 				12,
 				12
-			]
+			],
+			"name": "Dave Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "IDLE",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "IDLE"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				-11
 			],
-			"anim": "singDOWN",
+			"indices": [],
 			"fps": 24,
-			"name": "DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "DOWN"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				27
 			],
+			"indices": [],
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "RIGHT",
-			"indices": []
+			"loop": false,
+			"name": "RIGHT"
 		},
 		{
-			"loop": true,
-			"offsets": [
-				34,
-				10
-			],
-			"anim": "singLEFT",
-			"fps": 24,
-			"name": "LEFT",
-			"indices": []
-		},
-		{
-			"loop": true,
 			"offsets": [
 				-6,
 				14
 			],
-			"anim": "singUP",
+			"indices": [],
 			"fps": 24,
-			"name": "UP",
-			"indices": []
+			"anim": "singUP",
+			"loop": false,
+			"name": "UP"
+		},
+		{
+			"offsets": [
+				34,
+				10
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "LEFT"
 		}
 	],
 	"no_antialiasing": true,
@@ -140,9 +140,9 @@
 	"healthicon": "dave3d",
 	"flip_x": false,
 	"healthbar_colors": [
-		240,
-		140,
-		160
+		249,
+		180,
+		207
 	],
 	"camera_position": [
 		30,

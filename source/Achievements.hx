@@ -12,11 +12,11 @@ using StringTools;
 class Achievements {
 	public static var achievementsStuff:Array<Dynamic> = [ //Name, Description, Achievement save tag, Hidden achievement
 		["Freaky on a Friday Night Yeah",	"Play on a Friday... Night.",						'friday_night_play',	 false],
-		["You beat dave and kept your dignity as well!",		"Beat Dave's week on Hard with no Misses.",				'week1_nomiss',			false],
+		["World Saver",		"Beat Dave's week on Hard with no Misses.",				'week1_nomiss',			false],
 		["Certified Corn enthusiast!",				"Beat Bambi's week on Hard with no Misses.",				'week2_nomiss',			false],
-		["Certified Proffesional Rapper!",			"Beat Splitathon with no Misses.",				'week3_nomiss',			false],
-		["The",					"Beat the first Purgatory week on Hard with no Misses.",				'week4_nomiss',			false],
-		["Bandu is watching...",			"Beat the second Purgatory week on Hard with no Misses.",				'week5_nomiss',			false],
+		["Certified Professional Rapper!",			"Beat Splitathon with no Misses.",				'week3_nomiss',			false],
+		["Bambi Rage Quit",					"Beat the first Purgatory week on Hard with no Misses.",				'week4_nomiss',			false],
+		["Skill Solution",			"Beat the second Purgatory week on Hard with no Misses.",				'week5_nomiss',			false],
 		["You Cheated!, i know it!",					"Full Combo Cheating",				'cheater',			false],
 		["Expunged is at your current location",					"Full Combo Unfairness",				'unfaircheat',			false],
 		["What a Funkin' Disaster!",	"Complete a Song with a rating lower than 20%.",	'ur_bad',				false],
@@ -26,7 +26,12 @@ class Achievements {
 		["Hyperactive",					"Finish a Song without going Idle.",				'hype',					false],
 		["Just the Two of Us",			"Finish a Song pressing only two keys.",			'two_keys',				false],
 		["Toaster Gamer",				"Have you tried to run the game on a toaster?",		'toastie',				false],
-		["HOW",		"Full Combo Opposition",				'whatthefuck_how',			 false],
+		["HOW",		"Full Combo the song",				'whatthefuck_how',			 false],
+		["Vs Dave and Everyone",			"Beat the third Purgatory week (Dave's Rematch) on Hard with no Misses.",				'week6_nomiss',			false],
+		["Deez",					"Beat the fourth Purgatory week on Hard with no Misses.",				'week7_nomiss',			false],
+		["The Trio",					"Beat the fifth Purgatory week on Hard with no Misses.",				'week8_nomiss',			false],
+		["D¡AT-A_EXPU?NGED&",					"Be aTT thE  si x t h Purga  tory week  on Hard   with   no M is Ses.",				'week9_nomiss',			false],
+		["ANTAGONISM",					"Beat Antagonism without Misses.",				'week10_nomiss',			false],
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 

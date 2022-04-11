@@ -1,0 +1,39 @@
+{
+	"storyName": "DATA_EXPUNGED PART 1",
+	"hideFreeplay": false,
+	"weekBackground": "scaryooo",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "week8",
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"song1",
+			"bambi",
+			[
+				64,
+				89,
+				235
+			]
+		],
+		[
+			"Tyranny",
+			"bambi",
+			[
+				64,
+				89,
+				235
+			]
+		]
+	],
+	"weekName": "DISCORD.HX ERROR 820 IN LINE 10"
+}

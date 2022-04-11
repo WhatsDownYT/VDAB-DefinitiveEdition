@@ -2,93 +2,77 @@
 	"animations": [
 		{
 			"offsets": [
-				0,
-				0
+				168,
+				275
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "idle",
 			"indices": [],
-			"name": "IDLE"
-		},
-		{
-			"offsets": [
-				18,
-				-35
-			],
-			"loop": true,
-			"fps": 24,
+			"fps": 4,
 			"anim": "singLEFT",
-			"indices": [],
+			"loop": true,
 			"name": "LEFT"
 		},
 		{
 			"offsets": [
-				111,
-				-83
+				52,
+				217
 			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singDOWN",
 			"indices": [],
+			"fps": 4,
+			"anim": "singDOWN",
+			"loop": true,
 			"name": "DOWN"
 		},
 		{
 			"offsets": [
-				94,
-				99
+				172,
+				283
 			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singUP",
 			"indices": [],
+			"fps": 4,
+			"anim": "singUP",
+			"loop": true,
 			"name": "UP"
 		},
 		{
 			"offsets": [
-				0,
-				0
+				36,
+				126
 			],
+			"indices": [],
+			"fps": 4,
+			"anim": "singRIGHT",
 			"loop": true,
-			"fps": 24,
-			"anim": "idle-loop",
-			"indices": [
-				11,
-				12,
-				13,
-				14
-			],
-			"name": "IDLE"
+			"name": "RIGHT"
 		},
 		{
 			"offsets": [
-				77,
-				-14
+				1,
+				130
 			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singRIGHT",
 			"indices": [],
-			"name": "RIGHT"
+			"fps": 4,
+			"anim": "idle",
+			"loop": true,
+			"name": "IDLE"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/bambi-god2d",
 	"position": [
 		-170,
-		130
+		30
 	],
 	"healthicon": "bambiGod2d",
 	"flip_x": false,
 	"healthbar_colors": [
-		0,
 		255,
-		140
+		255,
+		255
 	],
 	"camera_position": [
-		10,
-		60
+		-20,
+		90
 	],
 	"sing_duration": 6.1,
-	"scale": 1.1
+	"scale": 0.8
 }

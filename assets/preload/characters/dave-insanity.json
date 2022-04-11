@@ -1,145 +1,145 @@
 {
 	"animations": [
 		{
+			"loop": true,
 			"offsets": [
 				-8,
 				10
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singLEFT-loop",
+			"fps": 24,
+			"name": "Dad Sing Note LEFT",
 			"indices": [
 				12,
 				13,
 				14,
 				15
-			],
-			"name": "Dad Sing Note LEFT"
+			]
 		},
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				27
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singRIGHT-loop",
+			"fps": 24,
+			"name": "Dad Sing Note RIGHT",
 			"indices": [
 				15,
 				16,
 				17,
 				18
-			],
-			"name": "Dad Sing Note RIGHT"
+			]
 		},
 		{
+			"loop": true,
 			"offsets": [
 				-6,
 				50
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singUP-loop",
+			"fps": 24,
+			"name": "Dad Sing Note UP",
 			"indices": [
 				56,
 				57,
 				58,
 				59
-			],
-			"name": "Dad Sing Note UP"
+			]
 		},
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": true,
-			"fps": 12,
 			"anim": "idle-loop",
+			"fps": 12,
+			"name": "Dave Idle",
 			"indices": [
 				10,
 				11,
 				12,
 				12
-			],
-			"name": "Dave Idle"
+			]
 		},
 		{
-			"loop": true,
-			"offsets": [
-				2,
-				-38
-			],
-			"anim": "singDOWN",
-			"fps": 12,
-			"name": "Down",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				1,
-				0
-			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "Idle",
-			"indices": []
-		},
-		{
-			"loop": true,
-			"offsets": [
-				21,
-				-18
-			],
-			"anim": "singRIGHT",
-			"fps": 12,
-			"name": "Right",
-			"indices": []
-		},
-		{
-			"loop": true,
-			"offsets": [
-				4,
-				20
-			],
-			"anim": "singUP",
-			"fps": 12,
-			"name": "Up",
-			"indices": []
-		},
-		{
-			"loop": true,
-			"offsets": [
-				85,
-				-14
-			],
-			"anim": "singLEFT",
-			"fps": 12,
-			"name": "Left",
-			"indices": []
-		},
-		{
-			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "scared",
+			"loop": true,
 			"fps": 24,
-			"name": "Scared",
-			"indices": []
+			"anim": "scared",
+			"indices": [],
+			"name": "Scared"
 		},
 		{
-			"loop": true,
+			"offsets": [
+				84,
+				-14
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Left"
+		},
+		{
+			"offsets": [
+				4,
+				20
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Up"
+		},
+		{
 			"offsets": [
 				30,
 				0
 			],
-			"anim": "hey",
+			"indices": [],
 			"fps": 24,
-			"name": "whatthefuckjusthappened",
-			"indices": []
+			"anim": "hey",
+			"loop": false,
+			"name": "whatthefuckjusthappened"
+		},
+		{
+			"offsets": [
+				21,
+				-18
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Right"
+		},
+		{
+			"offsets": [
+				1,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				2,
+				-38
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Down"
 		}
 	],
 	"no_antialiasing": false,
@@ -151,9 +151,9 @@
 	"healthicon": "dave",
 	"flip_x": false,
 	"healthbar_colors": [
-		35,
-		82,
-		206
+		15,
+		95,
+		255
 	],
 	"camera_position": [
 		70,

@@ -1,14 +1,25 @@
 {
 	"animations": [
 		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
 			"offsets": [
 				-4,
 				9
 			],
-			"loop": true,
+			"indices": [],
 			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
+			"loop": false,
 			"name": "left"
 		},
 		{
@@ -16,10 +27,10 @@
 				-35,
 				12
 			],
-			"loop": true,
+			"indices": [],
 			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
+			"loop": false,
 			"name": "down"
 		},
 		{
@@ -27,10 +38,10 @@
 				-30,
 				6
 			],
-			"loop": true,
+			"indices": [],
 			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
+			"loop": false,
 			"name": "right"
 		},
 		{
@@ -38,36 +49,25 @@
 				-24,
 				28
 			],
-			"loop": true,
+			"indices": [],
 			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "up"
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "idle"
+			"name": "up"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/bambi-mad",
 	"position": [
 		60,
-		440
+		410
 	],
 	"healthicon": "bambiMad",
 	"flip_x": false,
 	"healthbar_colors": [
-		0,
-		215,
-		20
+		12,
+		181,
+		0
 	],
 	"camera_position": [
 		-80,

@@ -1,6 +1,6 @@
 {
 	"storyName": "Mr. Bambi's fun corn maze!",
-	"hideFreeplay": false,
+	"hideFreeplay": true,
 	"weekBackground": "bambi",
 	"weekBefore": "week1",
 	"freeplayColor": [

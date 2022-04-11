@@ -11,6 +11,9 @@ class StrumNote extends FlxSprite
 	private var colorSwap:ColorSwap;
 	public var resetAnim:Float = 0;
 	private var noteData:Int = 0;
+	public var direction:Float = 90;//plan on doing scroll directions soon -bb
+	public var downScroll:Bool = false;//plan on doing scroll directions soon -bb
+	public var sustainReduce:Bool = true;
 
 	private var player:Int;
 
@@ -23,28 +26,33 @@ class StrumNote extends FlxSprite
 		super(x, y);
 
 		var skin:String = 'NOTE_assets';
-		if(PlayState.SONG.arrowSkin != null && PlayState.SONG.arrowSkin.length > 1 && player != 1)
-			{
-				skin = PlayState.SONG.arrowSkin;
-			}
-			else
-			{
-				skin = 'NOTE_assets';
-			}
+		if(PlayState.SONG.isSkinSep) {
+	    	if(PlayState.SONG.arrowSkin != null && PlayState.SONG.arrowSkin.length > 1 && player != 1) {
+		    	skin = PlayState.SONG.arrowSkin;
+	    	} else {
+	    		skin = 'NOTE_assets';
+	     	}
+		} else { // else not skin sep fdivuivud
+	    	if(PlayState.SONG.arrowSkin != null && PlayState.SONG.arrowSkin.length > 1) {
+		    	skin = PlayState.SONG.arrowSkin;
+	    	} else {
+	    		skin = 'NOTE_assets';
+	     	}
+		}
 
 		if(PlayState.isPixelStage)
 		{
-			loadGraphic(Paths.image('pixelUI/' + skin));
+			loadGraphic(Paths.image('pixelUI/' + skin, 'preload'));
 			width = width / 4;
 			height = height / 5;
-			loadGraphic(Paths.image('pixelUI/' + skin), true, Math.floor(width), Math.floor(height));
+			loadGraphic(Paths.image('pixelUI/' + skin, 'preload'), true, Math.floor(width), Math.floor(height));
 			animation.add('green', [6]);
 			animation.add('red', [7]);
 			animation.add('blue', [5]);
 			animation.add('purple', [4]);
 
 			antialiasing = false;
-			setGraphicSize(Std.int(width * ClientPrefs.noteSize * PlayState.daPixelZoom));
+			setGraphicSize(Std.int(width * PlayState.daPixelZoom));
 
 			switch (Math.abs(leData))
 			{
@@ -66,7 +74,7 @@ class StrumNote extends FlxSprite
 					animation.add('confirm', [15, 19], 24, false);
 			}
 		}
-		else
+		else if(!PlayState.isPixelStage)
 		{
 			frames = Paths.getSparrowAtlas(skin);
 			animation.addByPrefix('green', 'arrowUP');
@@ -74,7 +82,7 @@ class StrumNote extends FlxSprite
 			animation.addByPrefix('purple', 'arrowLEFT');
 			animation.addByPrefix('red', 'arrowRIGHT');
 			antialiasing = ClientPrefs.globalAntialiasing;
-			setGraphicSize(Std.int(width * ClientPrefs.noteSize));
+			setGraphicSize(Std.int(width * 0.7));
 			if (PlayState.SONG.song.toLowerCase() == 'cheating')
 				{
 					animation.addByPrefix('green', 'arrowLEFT');
@@ -82,7 +90,8 @@ class StrumNote extends FlxSprite
 					animation.addByPrefix('purple', 'arrowRIGHT');
 					animation.addByPrefix('red', 'arrowUP');
 					antialiasing = ClientPrefs.globalAntialiasing;
-					setGraphicSize(Std.int(width * ClientPrefs.noteSize));
+					setGraphicSize(Std.int(width * 0.7));
+
 				}
 
 			switch (Math.abs(leData))
@@ -153,13 +162,7 @@ class StrumNote extends FlxSprite
 		}
 	}
 
-	function updateConfirmOffset() { //TO DO: Find a calc to make the offset work fine on other angles
-		//centerOffsets();
-		//offset.x -= 13*(ClientPrefs.noteSize/0.7);
-		//offset.y -= 13*(ClientPrefs.noteSize/0.7);
-		
-		//like wtf was this ^^^
-		
+	function updateConfirmOffset() {
 		centerOrigin();
 	}
 }

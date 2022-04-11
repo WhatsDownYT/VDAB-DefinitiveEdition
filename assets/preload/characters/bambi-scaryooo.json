@@ -1,77 +1,77 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
-				260
+				-60
 			],
+			"indices": [],
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "Idle",
-			"indices": []
+			"loop": false,
+			"name": "idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
-				260
+				-70
 			],
-			"anim": "singLEFT",
+			"indices": [],
 			"fps": 24,
-			"name": "left",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				260
-			],
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "down",
-			"indices": []
+			"loop": false,
+			"name": "down"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				0,
-				260
+				40,
+				-30
 			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "left"
+		},
+		{
+			"offsets": [
+				10,
+				-20
+			],
+			"indices": [],
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "right",
-			"indices": []
+			"loop": false,
+			"name": "right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
-				260
+				-30
 			],
-			"anim": "singUP",
+			"indices": [],
 			"fps": 24,
-			"name": "up",
-			"indices": []
+			"anim": "singUP",
+			"loop": false,
+			"name": "up"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/SPOOKYIDIOT",
 	"position": [
-		-170,
-		370
+		0,
+		-10
 	],
 	"healthicon": "bamberRUNy",
 	"flip_x": false,
 	"healthbar_colors": [
-		0,
-		215,
-		20
+		12,
+		181,
+		0
 	],
 	"camera_position": [
-		-90,
-		-240
+		70,
+		-60
 	],
 	"sing_duration": 6.1,
 	"scale": 1.1

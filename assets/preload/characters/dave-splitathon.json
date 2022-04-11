@@ -1,122 +1,133 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				-9,
 				10
 			],
-			"anim": "singLEFT-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "Dad Sing Note LEFT",
+			"anim": "singLEFT-loop",
 			"indices": [
 				12,
 				13,
 				14,
 				15
-			]
+			],
+			"name": "Dad Sing Note LEFT"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				27
 			],
-			"anim": "singRIGHT-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "Dad Sing Note RIGHT",
+			"anim": "singRIGHT-loop",
 			"indices": [
 				15,
 				16,
 				17,
 				18
-			]
+			],
+			"name": "Dad Sing Note RIGHT"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-6,
 				50
 			],
-			"anim": "singUP-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "Dad Sing Note UP",
+			"anim": "singUP-loop",
 			"indices": [
 				56,
 				57,
 				58,
 				59
-			]
+			],
+			"name": "Dad Sing Note UP"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				140,
 				-100
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "hey",
-			"indices": [],
-			"name": "WhatYouKnowAboutRollingDownInTheDeep"
+			"fps": 24,
+			"name": "WhatYouKnowAboutRollingDownInTheDeep",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": true,
-			"fps": 12,
 			"anim": "idle-loop",
+			"fps": 12,
+			"name": "Dave Idle",
 			"indices": [
 				11,
 				12,
 				13,
 				14
-			],
-			"name": "Dave Idle"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "SplitIdle"
+			"fps": 24,
+			"name": "SplitIdle",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-12,
-				23
-			],
 			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "scared",
 			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "SplitUp"
+			"name": "Nervous",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-41,
-				-15
-			],
 			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "happy",
 			"fps": 24,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "SplitRight"
+			"name": "Happy",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "what",
+			"fps": 24,
+			"name": "Mad",
+			"indices": []
 		},
 		{
 			"offsets": [
 				38,
 				9
 			],
-			"loop": true,
+			"indices": [],
 			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
+			"loop": false,
 			"name": "SplitLeft"
 		},
 		{
@@ -124,44 +135,33 @@
 				8,
 				-23
 			],
-			"loop": true,
+			"indices": [],
 			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
+			"loop": false,
 			"name": "SplitDown"
 		},
 		{
 			"offsets": [
-				0,
-				0
+				-12,
+				23
 			],
-			"loop": true,
-			"fps": 24,
-			"anim": "scared",
 			"indices": [],
-			"name": "Nervous"
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "SplitUp"
 		},
 		{
 			"offsets": [
-				0,
-				0
+				-41,
+				-15
 			],
-			"loop": true,
-			"fps": 24,
-			"anim": "happy",
 			"indices": [],
-			"name": "Happy"
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"loop": true,
 			"fps": 24,
-			"anim": "what",
-			"indices": [],
-			"name": "Mad"
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "SplitRight"
 		}
 	],
 	"no_antialiasing": false,
@@ -173,9 +173,9 @@
 	"healthicon": "dave",
 	"flip_x": false,
 	"healthbar_colors": [
-		35,
-		82,
-		206
+		15,
+		95,
+		255
 	],
 	"camera_position": [
 		30,

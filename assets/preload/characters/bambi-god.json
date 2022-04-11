@@ -1,66 +1,66 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				140,
-				70
+				-50,
+				-70
 			],
-			"anim": "singLEFT",
-			"fps": 24,
-			"name": "singLEFT",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				40,
-				100
-			],
-			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "singRIGHT",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				210,
-				110
-			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "singDOWN",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				130,
-				60
-			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "singUP",
-			"indices": []
-		},
-		{
-			"offsets": [
-				100,
-				60
-			],
-			"indices": [],
+			"loop": true,
 			"fps": 4,
 			"anim": "idle",
+			"indices": [],
+			"name": "IDLE"
+		},
+		{
+			"offsets": [
+				-210,
+				-110
+			],
 			"loop": false,
-			"name": "idle"
+			"fps": 4,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "RIGHT"
+		},
+		{
+			"offsets": [
+				71,
+				40
+			],
+			"loop": false,
+			"fps": 4,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "DOWN"
+		},
+		{
+			"offsets": [
+				-58,
+				-30
+			],
+			"loop": false,
+			"fps": 4,
+			"anim": "singUP",
+			"indices": [],
+			"name": "UP"
+		},
+		{
+			"offsets": [
+				-20,
+				10
+			],
+			"loop": false,
+			"fps": 4,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "LEFT"
 		}
 	],
-	"no_antialiasing": false,
-	"image": "characters/bambi-god",
+	"no_antialiasing": true,
+	"image": "characters/god_expunged",
 	"position": [
-		-90,
-		-120
+		80,
+		-330
 	],
 	"healthicon": "bambiGod",
 	"flip_x": false,
@@ -70,9 +70,9 @@
 		255
 	],
 	"camera_position": [
-		100,
-		100
+		-530,
+		-220
 	],
 	"sing_duration": 6.1,
-	"scale": 1
+	"scale": 1.7
 }

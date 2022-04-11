@@ -1,5 +1,8 @@
 package;
 
+import flixel.FlxG;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
 import flixel.FlxSprite;
 import openfl.utils.Assets as OpenFlAssets;
 
@@ -11,14 +14,26 @@ class HealthIcon extends FlxSprite
 	private var isOldIcon:Bool = false;
 	private var isPlayer:Bool = false;
 	private var char:String = '';
+	public var id:Int;
 
-	public function new(char:String = 'bf', isPlayer:Bool = false)
+	public var defualtIconScale:Float = 1;
+	public var iconScale:Float = 1;
+	public var iconSize:Float;
+
+	private var tween:FlxTween;
+
+	public function new(char:String = 'bf', isPlayer:Bool = false, ?_id:Int = -1)
 	{
 		super();
 		isOldIcon = (char == 'bf-old');
 		this.isPlayer = isPlayer;
 		changeIcon(char);
 		scrollFactor.set();
+
+		animation.play(char);
+		scrollFactor.set();
+
+		tween = FlxTween.tween(this, {}, 0);
 	}
 
 	override function update(elapsed:Float)
@@ -47,7 +62,7 @@ class HealthIcon extends FlxSprite
 			this.char = char;
 
 			antialiasing = ClientPrefs.globalAntialiasing;
-			if(char.endsWith('-pixel')) {
+			if(char.endsWith('-pixel') || char == 'bambi-3d' || char == 'dave-3d' || char == 'bambi-unfair' || char == 'bambi-god' || char == 'gary' || char == 'expunged' || char == 'bombu' || char == 'bamburg' || char == 'bamburg-player' || char == 'bambi-piss-3d') {
 				antialiasing = false;
 			}
 		}
@@ -55,5 +70,12 @@ class HealthIcon extends FlxSprite
 
 	public function getCharacter():String {
 		return char;
+	}
+
+	public function tweenToDefaultScale(_time:Float, _ease:Null<flixel.tweens.EaseFunction>){
+
+		tween.cancel();
+		tween = FlxTween.tween(this, {iconScale: this.defualtIconScale}, _time, {ease: _ease});
+
 	}
 }

@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				88,
+				69
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				8,
+				-53
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-12,
+				223
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				70
+			],
+			"anim": "idle-loop",
+			"fps": 12,
+			"name": "idle-fart",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				65
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				70
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle-fart",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/drip-dave",
+	"position": [
+		10,
+		256
+	],
+	"healthicon": "dave",
+	"flip_x": false,
+	"healthbar_colors": [
+		35,
+		82,
+		206
+	],
+	"camera_position": [
+		30,
+		-60
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}

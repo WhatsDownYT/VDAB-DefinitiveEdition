@@ -1,0 +1,48 @@
+{
+	"storyName": "Dave's Rematch",
+	"hideFreeplay": false,
+	"weekBackground": "omgdave",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "week5",
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"Rondabout",
+			"bambi",
+			[
+				64,
+				89,
+				235
+			]
+		],
+		[
+			"song2",
+			"bambi",
+			[
+				64,
+				89,
+				235
+			]
+		],
+		[
+			"song3",
+			"bambi",
+			[
+				255,
+				0,
+				60
+			]
+		]
+	],
+	"weekName": "Dave's Rematch - Bambi's Purgatory"
+}

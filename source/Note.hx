@@ -11,6 +11,13 @@ import editors.ChartingState;
 
 using StringTools;
 
+typedef EventNote = {
+	strumTime:Float,
+	event:String,
+	value1:String,
+	value2:String
+}
+
 class Note extends FlxSprite
 {
 	public var strumTime:Float = 0;
@@ -32,11 +39,13 @@ class Note extends FlxSprite
 	public var noteType(default, set):String = null;
 
 	public var eventName:String = '';
+	public var eventLength:Int = 0;
 	public var eventVal1:String = '';
 	public var eventVal2:String = '';
 
 	public var colorSwap:ColorSwap;
 	public var inEditor:Bool = false;
+	public var gfNote:Bool = false;
 	private var earlyHitMult:Float = 0.5;
 
 	public static var swagWidth:Float = 160 * 0.7;
@@ -105,6 +114,8 @@ class Note extends FlxSprite
 					hitCausesMiss = true;
 				case 'No Animation':
 					noAnimation = true;
+				case 'GF Sing':
+					gfNote = true;
 			}
 			noteType = value;
 		}
@@ -156,7 +167,7 @@ class Note extends FlxSprite
 			}
 		}
 
-		if(isPlayer) texture = 'NOTE_assets';
+		if(PlayState.SONG.isSkinSep && isPlayer) texture = 'NOTE_assets';
 		// trace(prevNote);
 
 		switch (PlayState.SONG.song.toLowerCase())
@@ -207,7 +218,7 @@ class Note extends FlxSprite
 		}
 		switch (PlayState.SONG.song.toLowerCase())
 		{
-			case 'cheating' | 'unfairness':
+			case 'cheating' | 'unfairness' | 'devastation':
 				if (Type.getClassName(Type.getClass(FlxG.state)).contains("PlayState"))
 				{
 					var state:PlayState = cast(FlxG.state,PlayState);
@@ -292,7 +303,10 @@ class Note extends FlxSprite
 						prevNote.animation.play('redhold');
 				}
 
-				prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.05 * PlayState.songSpeed;
+				if(PlayState.instance != null)
+					{
+						prevNote.scale.y *= PlayState.instance.songSpeed;
+					}
 				if(PlayState.isPixelStage) {
 					prevNote.scale.y *= 1.19;
 				}
@@ -335,20 +349,20 @@ class Note extends FlxSprite
 		var blahblah:String = arraySkin.join('/');
 		if(PlayState.isPixelStage) {
 			if(isSustainNote) {
-				loadGraphic(Paths.image('pixelUI/' + blahblah + 'ENDS'));
+				loadGraphic(Paths.image('pixelUI/' + blahblah + 'ENDS', 'preload'));
 				width = width / 4;
 				height = height / 2;
-				loadGraphic(Paths.image('pixelUI/' + blahblah + 'ENDS'), true, Math.floor(width), Math.floor(height));
+				loadGraphic(Paths.image('pixelUI/' + blahblah + 'ENDS', 'preload'), true, Math.floor(width), Math.floor(height));
 			} else {
-				loadGraphic(Paths.image('pixelUI/' + blahblah));
+				loadGraphic(Paths.image('pixelUI/' + blahblah, 'preload'));
 				width = width / 4;
 				height = height / 5;
-				loadGraphic(Paths.image('pixelUI/' + blahblah), true, Math.floor(width), Math.floor(height));
+				loadGraphic(Paths.image('pixelUI/' + blahblah, 'preload'), true, Math.floor(width), Math.floor(height));
 			}
-			setGraphicSize(Std.int(width * ClientPrefs.noteSize * PlayState.daPixelZoom));
+			setGraphicSize(Std.int(width * PlayState.daPixelZoom));
 			loadPixelNoteAnims();
 			antialiasing = false;
-		} else {
+		} else if (!PlayState.isPixelStage) {
 			frames = Paths.getSparrowAtlas(blahblah);
 			loadNoteAnims();
 			antialiasing = ClientPrefs.globalAntialiasing;
@@ -387,7 +401,7 @@ class Note extends FlxSprite
 		}
 
 		
-		setGraphicSize(Std.int(width * ClientPrefs.noteSize));
+		setGraphicSize(Std.int(width * 0.7));
 		updateHitbox();
 	}
 
@@ -410,20 +424,20 @@ class Note extends FlxSprite
 		}
 	}
 
-	//public var isAlt:Bool = false;
+	public var isAlt:Bool = false;
 
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
 
 		
-		if (MyStrum != null)
+		if (MyStrum != null && !isAlt)
 		{
 			x = MyStrum.x + (isSustainNote ? width : 0);
 		}
 		else
 		{
-			if (InPlayState)
+			if (InPlayState && !isAlt)
 			{
 				var state:PlayState = cast(FlxG.state,PlayState);
 				if (mustPress)

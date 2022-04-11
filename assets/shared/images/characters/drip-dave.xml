@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="drip-dave.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="down0000" x="0" y="0" width="397" height="456"/>
+	<SubTexture name="down0001" x="397" y="0" width="397" height="456"/>
+	<SubTexture name="down0002" x="794" y="0" width="397" height="456"/>
+	<SubTexture name="down0003" x="794" y="0" width="397" height="456"/>
+	<SubTexture name="idle-fart0000" x="1191" y="0" width="410" height="561"/>
+	<SubTexture name="idle-fart0001" x="1601" y="0" width="410" height="561"/>
+	<SubTexture name="idle-fart0002" x="2011" y="0" width="410" height="561"/>
+	<SubTexture name="idle-fart0003" x="2011" y="0" width="410" height="561"/>
+	<SubTexture name="idle-fart0004" x="2011" y="0" width="410" height="561"/>
+	<SubTexture name="idle-fart0005" x="2011" y="0" width="410" height="561"/>
+	<SubTexture name="idle-fart0006" x="2011" y="0" width="410" height="561"/>
+	<SubTexture name="left0000" x="2421" y="0" width="477" height="537"/>
+	<SubTexture name="left0001" x="2898" y="0" width="477" height="537"/>
+	<SubTexture name="left0002" x="3375" y="0" width="477" height="537"/>
+	<SubTexture name="left0003" x="3375" y="0" width="477" height="537"/>
+	<SubTexture name="right0000" x="0" y="561" width="544" height="532"/>
+	<SubTexture name="right0001" x="544" y="561" width="544" height="532"/>
+	<SubTexture name="right0002" x="1088" y="561" width="544" height="532"/>
+	<SubTexture name="right0003" x="1088" y="561" width="544" height="532"/>
+	<SubTexture name="up0000" x="1632" y="561" width="289" height="714"/>
+	<SubTexture name="up0001" x="1921" y="561" width="289" height="714"/>
+	<SubTexture name="up0002" x="2210" y="561" width="289" height="714"/>
+	<SubTexture name="up0003" x="2210" y="561" width="289" height="714"/>
+</TextureAtlas>

@@ -1,134 +1,134 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				-9,
 				10
 			],
-			"anim": "singLEFT-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "Dad Sing Note LEFT",
+			"anim": "singLEFT-loop",
 			"indices": [
 				12,
 				13,
 				14,
 				15
-			]
+			],
+			"name": "Dad Sing Note LEFT"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				27
 			],
-			"anim": "singRIGHT-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "Dad Sing Note RIGHT",
+			"anim": "singRIGHT-loop",
 			"indices": [
 				15,
 				16,
 				17,
 				18
-			]
+			],
+			"name": "Dad Sing Note RIGHT"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-6,
 				50
 			],
-			"anim": "singUP-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "Dad Sing Note UP",
+			"anim": "singUP-loop",
 			"indices": [
 				56,
 				57,
 				58,
 				59
-			]
+			],
+			"name": "Dad Sing Note UP"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				140,
 				-100
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "hey",
-			"indices": [],
-			"name": "WhatYouKnowAboutRollingDownInTheDeep"
+			"fps": 24,
+			"name": "WhatYouKnowAboutRollingDownInTheDeep",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": true,
-			"fps": 12,
 			"anim": "idle-loop",
+			"fps": 12,
+			"name": "Dave Idle",
 			"indices": [
 				11,
 				12,
 				13,
 				14
-			],
-			"name": "Dave Idle"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "Dave idle dance"
+			"fps": 24,
+			"name": "Dave idle dance",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				-3,
 				-35
 			],
-			"indices": [],
-			"fps": 12,
 			"anim": "singDOWN",
-			"loop": true,
-			"name": "Dave Sing Note DOWN"
+			"fps": 12,
+			"name": "Dave Sing Note DOWN",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				16,
 				6
 			],
-			"indices": [],
-			"fps": 12,
 			"anim": "singLEFT",
-			"loop": true,
-			"name": "Dave Sing Note LEFT"
+			"fps": 12,
+			"name": "Dave Sing Note LEFT",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				-24,
 				40
 			],
-			"indices": [],
-			"fps": 12,
 			"anim": "singUP",
-			"loop": true,
-			"name": "Dave Sing Note UP"
+			"fps": 12,
+			"name": "Dave Sing Note UP",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				68,
 				27
 			],
-			"indices": [],
-			"fps": 12,
 			"anim": "singRIGHT",
-			"loop": true,
-			"name": "Dave Sing Note RIGHT"
+			"fps": 12,
+			"name": "Dave Sing Note RIGHT",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -137,12 +137,12 @@
 		-80,
 		-3
 	],
-	"healthicon": "daveOlder",
+	"healthicon": "davefunny",
 	"flip_x": false,
 	"healthbar_colors": [
-		35,
-		82,
-		206
+		168,
+		202,
+		236
 	],
 	"camera_position": [
 		-30,

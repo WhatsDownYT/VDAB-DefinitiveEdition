@@ -11562,8 +11562,10 @@
 		"song": "Unfairness",
 		"needsVoices": true,
 		"sections": 1,
+		"arrowSkin": "polynote",
 		"validScore": true,
-		"speed": 1.5,
+		"isSkinSep": true,
+		"speed": 1,
 		"bpm": 300
 	}
 }

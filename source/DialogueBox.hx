@@ -36,7 +36,7 @@ class DialogueBox extends FlxSpriteGroup
 
 	var dropText:FlxText;
 
-	public var noAa:Array<String> = ["dialogue/dave_furiosity", "dialogue/3d_bamb", "dialogue/unfairnessPortrait"];
+	public var noAa:Array<String> = ["dialogue/altbox/dave_furiosity", "dialogue/altbox/3d_bamb", "dialogue/altbox/unfairnessPortrait"];
 
 	public var finishThing:Void->Void;
 	public var nextDialogueThing:Void->Void = null;
@@ -72,10 +72,10 @@ class DialogueBox extends FlxSpriteGroup
 				FlxG.sound.playMusic(Paths.music('LunchboxScary'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
 			case 'insanity' | 'splitathon':
-				FlxG.sound.playMusic(Paths.music('DaveDialogue'), 0);
+				FlxG.sound.playMusic(Paths.music('a-new-day'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
 			case 'furiosity' | 'polygonized' | 'cheating' | 'unfairness':
-				FlxG.sound.playMusic(Paths.music('scaryAmbience'), 0);
+				FlxG.sound.playMusic(Paths.music('im-angey'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
 			case 'supernovae' | 'glitch':
 				randomNumber = FlxG.random.int(0, 50);
@@ -308,7 +308,19 @@ class DialogueBox extends FlxSpriteGroup
 			dialogueStarted = true;
 		}
 
-		if (FlxG.keys.justPressed.ANY  && dialogueStarted)
+		#if android
+        var justTouched:Bool = false;
+
+		for (touch in FlxG.touches.list)
+		{
+			if (touch.justPressed)
+			{
+				justTouched = true;
+			}
+		}
+		#end
+
+		if(PlayerSettings.player1.controls.ACCEPT #if android || justTouched #end)
 		{
 			remove(dialogue);
 			

@@ -3,17 +3,6 @@
 		{
 			"loop": false,
 			"offsets": [
-				7,
-				0
-			],
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "BF IDLE"
-		},
-		{
-			"loop": false,
-			"offsets": [
 				0,
 				0
 			],
@@ -98,6 +87,17 @@
 			"fps": 24,
 			"name": "BF DOWN MISS",
 			"indices": []
+		},
+		{
+			"offsets": [
+				7,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "BF IDLE"
 		}
 	],
 	"no_antialiasing": true,

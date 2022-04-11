@@ -20,19 +20,25 @@ import flixel.util.FlxTimer;
 import lime.app.Application;
 import Achievements;
 import editors.MasterEditorMenu;
+import purgatory.PurMainMenuState;
 
 using StringTools;
 
 class ExtrasMenuState extends MusicBeatState
 {
-	public static var psychEngineVersion:String = '0.4.2 - VsDaveDE'; //This is also used for Discord RPC
+	public static var psychEngineVersion:String = '0.5.1 Dave'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
 	
-	var optionShit:Array<String> = ['awards', 'credits', 'discord'];
+	var optionShit:Array<String> = [
+		#if MODS_ALLOWED 'mods', #end
+		#if ACHIEVEMENTS_ALLOWED 'awards', #end
+		'credits',
+		#if desktop 'discord' #end
+	];
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
@@ -118,13 +124,13 @@ class ExtrasMenuState extends MusicBeatState
 				menuItem.scrollFactor.set();
 				menuItem.antialiasing = ClientPrefs.globalAntialiasing;
 				if (firstStart)
-					FlxTween.tween(menuItem,{y: 60 + (i * 230)},1 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
+					FlxTween.tween(menuItem,{y: 60 + (i * 160)},1 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
 						{ 
 							finishedFunnyMove = true; 
 							changeItem();
 						}});
 				else
-					menuItem.y = 60 + (i * 230);
+					menuItem.y = 60 + (i * 160);
 			}
 
 		firstStart = false;
@@ -164,19 +170,30 @@ class ExtrasMenuState extends MusicBeatState
 				changeItem(1);
 			}
 
-			if (controls.BACK)
+			if (controls.BACK && MainMenuState.sexo3)
 			{
 				selectedSomethin = true;
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 				MusicBeatState.switchState(new MainMenuState());
 			}
+			else if (controls.BACK && PurMainMenuState.sexo4)
+			{
+				selectedSomethin = true;
+				FlxG.sound.play(Paths.sound('cancelMenu'));
+				MusicBeatState.switchState(new PurMainMenuState());
+			}
 
 			if (controls.ACCEPT)
 				{
-					if (optionShit[curSelected] == 'donate')
+					if (optionShit[curSelected] == 'discord')
 					{
-						CoolUtil.browserLoad('https://discord.gg/vsdave');
-					}
+						if (MainMenuState.sexo3) {
+				    		CoolUtil.browserLoad('https://discord.gg/vsdave'); //vs dave discord
+						} 
+						else if (PurMainMenuState.sexo4) { // ELSE IF MY NUT MY NUTS MY N
+							CoolUtil.browserLoad('https://discord.gg/tGvCrQPpsR'); //bp discord
+						}
+					} 
 					else
 					{
 						selectedSomethin = true;
@@ -243,6 +260,10 @@ class ExtrasMenuState extends MusicBeatState
 					MusicBeatState.switchState(new CreditsState());
 				case 'awards':
 					MusicBeatState.switchState(new AchievementsMenuState());
+				#if MODS_ALLOWED
+				case 'mods':
+					MusicBeatState.switchState(new ModsMenuState());
+				#end
 			}
 		}
 

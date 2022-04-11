@@ -1,0 +1,48 @@
+{
+	"storyName": "Bambi's rage battle",
+	"hideFreeplay": false,
+	"weekBackground": "rage",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "",
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"Shattered",
+			"bambi",
+			[
+				64,
+				89,
+				235
+			]
+		],
+		[
+			"Supplanted",
+			"bambi",
+			[
+				64,
+				89,
+				235
+			]
+		],
+		[
+			"Reality-Breaking",
+			"bambi",
+			[
+				255,
+				0,
+				60
+			]
+		]
+	],
+	"weekName": "Rage Week - Bambi's Purgatory"
+}

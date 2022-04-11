@@ -1,6 +1,6 @@
 {
 	"storyName": "Your New Week",
-	"hideFreeplay": false,
+	"hideFreeplay": true,
 	"weekBackground": "stage",
 	"freeplayColor": [
 		146,

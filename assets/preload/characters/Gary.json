@@ -1,26 +1,48 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				453,
 				205
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "left"
+			"fps": 24,
+			"name": "left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				342,
 				161
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
 			"loop": false,
-			"name": "right"
+			"offsets": [
+				361,
+				93
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				344,
+				243
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
 		},
 		{
 			"offsets": [
@@ -32,32 +54,10 @@
 			"anim": "idle",
 			"loop": false,
 			"name": "Idle"
-		},
-		{
-			"offsets": [
-				361,
-				23
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singDOWN",
-			"loop": false,
-			"name": "down"
-		},
-		{
-			"offsets": [
-				344,
-				243
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singUP",
-			"loop": false,
-			"name": "up"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/Gary",
+	"image": "characters/gary",
 	"position": [
 		120,
 		160
@@ -65,14 +65,14 @@
 	"healthicon": "gary",
 	"flip_x": false,
 	"healthbar_colors": [
-		86,
-		83,
-		81
+		53,
+		227,
+		69
 	],
 	"camera_position": [
-		-380,
-		-310
+		-370,
+		-250
 	],
 	"sing_duration": 4,
-	"scale": 1.4
+	"scale": 1.2
 }

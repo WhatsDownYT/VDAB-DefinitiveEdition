@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Dave_FuriosityNEW.png">
+	<!-- Created with Adobe Animate version 19.2.0.405 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Down0000" x="2829" y="1608" width="1172" height="1613" frameX="0" frameY="-63" frameWidth="1172" frameHeight="1676"/>
+	<SubTexture name="Down0001" x="1428" y="1629" width="1165" height="1619" frameX="-4" frameY="-39" frameWidth="1172" frameHeight="1676"/>
+	<SubTexture name="Down0002" x="10" y="3235" width="1107" height="1597" frameX="0" frameY="0" frameWidth="1172" frameHeight="1676"/>
+	<SubTexture name="Idle0000" x="979" y="6601" width="949" height="1521" frameX="0" frameY="0" frameWidth="969" frameHeight="1521"/>
+	<SubTexture name="Idle0001" x="1952" y="6562" width="957" height="1515" frameX="-12" frameY="-6" frameWidth="969" frameHeight="1521"/>
+	<SubTexture name="Idle0002" x="10" y="6635" width="947" height="1461" frameX="-12" frameY="-60" frameWidth="969" frameHeight="1521"/>
+	<SubTexture name="Idle0003" x="2919" y="6562" width="943" height="1456" frameX="-12" frameY="-64" frameWidth="969" frameHeight="1521"/>
+	<SubTexture name="Left0000" x="10" y="10" width="1408" height="1621" frameX="0" frameY="0" frameWidth="1408" frameHeight="1627"/>
+	<SubTexture name="Left0001" x="1428" y="10" width="1391" height="1609" frameX="-13" frameY="-13" frameWidth="1408" frameHeight="1627"/>
+	<SubTexture name="Left0002" x="10" y="1641" width="1121" height="1584" frameX="-281" frameY="-43" frameWidth="1408" frameHeight="1627"/>
+	<SubTexture name="Right0000" x="2829" y="10" width="1192" height="1588" frameX="-65" frameY="-44" frameWidth="1257" frameHeight="1642"/>
+	<SubTexture name="Right0001" x="2603" y="3231" width="1203" height="1557" frameX="-37" frameY="-57" frameWidth="1257" frameHeight="1642"/>
+	<SubTexture name="Right0002" x="1127" y="3258" width="1073" height="1642" frameX="0" frameY="0" frameWidth="1257" frameHeight="1642"/>
+	<SubTexture name="Up0000" x="10" y="4842" width="959" height="1783" frameX="0" frameY="0" frameWidth="1050" frameHeight="1783"/>
+	<SubTexture name="Up0001" x="2210" y="4798" width="953" height="1754" frameX="-7" frameY="-21" frameWidth="1050" frameHeight="1783"/>
+	<SubTexture name="Up0002" x="979" y="4910" width="963" height="1681" frameX="-87" frameY="-83" frameWidth="1050" frameHeight="1783"/>
+</TextureAtlas>

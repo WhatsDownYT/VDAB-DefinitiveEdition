@@ -1,6 +1,6 @@
 {
 	"storyName": "Dave's fun rapping battle!",
-	"hideFreeplay": false,
+	"hideFreeplay": true,
 	"weekBackground": "dave",
 	"freeplayColor": [
 		146,

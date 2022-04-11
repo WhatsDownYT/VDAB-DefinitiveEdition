@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="dave.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Idle0000" x="0" y="0" width="328" height="585"/>
+	<SubTexture name="Idle0001" x="328" y="0" width="328" height="585"/>
+	<SubTexture name="Idle0002" x="656" y="0" width="328" height="585"/>
+	<SubTexture name="Idle0003" x="984" y="0" width="328" height="585"/>
+	<SubTexture name="Idle0004" x="984" y="0" width="328" height="585"/>
+	<SubTexture name="Idle0005" x="1312" y="0" width="328" height="585"/>
+	<SubTexture name="Idle0006" x="1312" y="0" width="328" height="585"/>
+</TextureAtlas>

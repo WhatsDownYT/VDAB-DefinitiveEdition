@@ -1,69 +1,10 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				-9,
-				10
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singLEFT-loop",
-			"indices": [
-				12,
-				13,
-				14,
-				15
-			],
-			"name": "Dad Sing Note LEFT"
-		},
-		{
-			"offsets": [
-				0,
-				27
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singRIGHT-loop",
-			"indices": [
-				15,
-				16,
-				17,
-				18
-			],
-			"name": "Dad Sing Note RIGHT"
-		},
-		{
-			"offsets": [
-				-6,
-				50
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singUP-loop",
-			"indices": [
-				56,
-				57,
-				58,
-				59
-			],
-			"name": "Dad Sing Note UP"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				140,
-				-100
-			],
-			"anim": "hey",
-			"fps": 24,
-			"name": "WhatYouKnowAboutRollingDownInTheDeep",
-			"indices": []
-		},
-		{
 			"loop": true,
 			"offsets": [
 				0,
-				0
+				40
 			],
 			"anim": "idle-loop",
 			"fps": 12,
@@ -78,7 +19,7 @@
 		{
 			"offsets": [
 				0,
-				0
+				40
 			],
 			"loop": false,
 			"fps": 24,
@@ -87,66 +28,66 @@
 			"name": "Idle"
 		},
 		{
-			"offsets": [
-				-4,
-				-6
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singLEFT",
-			"indices": [],
-			"name": "left"
-		},
-		{
+			"loop": false,
 			"offsets": [
 				-20,
-				-50
+				-20
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "down"
-		},
-		{
-			"offsets": [
-				-44,
-				-8
-			],
-			"loop": true,
 			"fps": 24,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "right"
+			"name": "down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				46,
-				1
+				41
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-54,
+				32
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				26,
+				34
+			],
 			"indices": [],
-			"name": "up"
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "left"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/bambi",
 	"position": [
 		90,
-		440
+		430
 	],
 	"healthicon": "bambi",
 	"flip_x": false,
 	"healthbar_colors": [
-		0,
-		215,
-		20
+		12,
+		181,
+		0
 	],
 	"camera_position": [
 		0,
-		0
+		-40
 	],
 	"sing_duration": 6.1,
 	"scale": 1.2

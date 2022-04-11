@@ -1,6 +1,6 @@
 {
 	"song": {
-		"speed": 3.7,
+		"speed": 3.5,
 		"stage": "spooky",
 		"player1": "bf-scared",
 		"player2": "bambi-scaryooo",
@@ -2376,15 +2376,27 @@
 				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [
-					[
-						110142.857142857,
-						-1,
-						"Opponent Fade",
-						"1",
-						"0"
-					]
-				],
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"gfSection": false,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false

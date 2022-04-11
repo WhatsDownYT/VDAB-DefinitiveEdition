@@ -23,7 +23,7 @@ class WarningState extends MusicBeatState
 		
 		var bg:FlxSprite = new FlxSprite();
 		
-		bg.loadGraphic(Paths.image("dave/warning", "shared"));
+		bg.loadGraphic(Paths.image("dave/warning", "preload"));
 		add(bg);
 		
 		#if mobileC
@@ -41,6 +41,11 @@ class WarningState extends MusicBeatState
 		if (controls.ACCEPT){
 			FlxG.sound.play(Paths.sound('scrollMenu'));
 			MusicBeatState.switchState(new MainMenuState());
+		}
+		if (controls.BACK)
+		{
+			FlxG.sound.play(Paths.sound('cancelMenu'));
+			MusicBeatState.switchState(new TitleState());
 		}
 	}
 }

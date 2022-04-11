@@ -1,17 +1,8 @@
 {
 	"songs": [
 		[
-			"Example High",
-			"mom",
-			[
-				146,
-				113,
-				253
-			]
-		],
-		[
-			"Example Roses",
-			"",
+			"test",
+			"bf-pixel",
 			[
 				146,
 				113,
@@ -22,12 +13,12 @@
 	"hideFreeplay": false,
 	"weekBackground": "",
 	"weekCharacters": [
-		"Mom",
-		"bf",
+		"bf-pixel",
+		"bf-pixel",
 		"gf"
 	],
-	"storyName": "Examples",
-	"weekName": "Custom Week",
+	"storyName": "Example",
+	"weekName": "Example",
 	"freeplayColor": [
 		146,
 		113,

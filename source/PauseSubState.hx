@@ -13,14 +13,17 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.FlxCamera;
+import purgatory.NewStoryPurgatory;
+import purgatory.PurFreeplayState;
+import purgatory.PurWeekData;
 
 class PauseSubState extends MusicBeatSubstate
 {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
 	var menuItems:Array<String> = [];
-	var menuItemsOG:Array<String> = ['Resume', 'Restart Song', 'Toggle Practice Mode', 'Botplay', 'Exit to menu'];
-	var menuCryAbouIt:Array<String> = ['Resume', 'Restart Song', 'Exit to menu'];
+	var menuItemsOG:Array<String> = ['Resume', 'Restart Song', 'Exit to Options menu'#if (android), 'Chart Editor' #end, 'Exit to menu'];
+	var menuCryAbouIt:Array<String> = ['Resume', 'Restart Song', 'Exit to Options menu', 'Exit to menu'];
 	var menuFuckYou:Array<String> = ['Resume', 'Restart Song'];
 	var difficultyChoices = [];
 	var curSelected:Int = 0;
@@ -29,17 +32,29 @@ class PauseSubState extends MusicBeatSubstate
 	var practiceText:FlxText;
 	var botplayText:FlxText;
 
+	public static var songName:String = '';
+
 	public static var transCamera:FlxCamera;
 
 	public function new(x:Float, y:Float)
 	{
 		super();
+
+		if(PlayState.chartingMode)
+		{
+			var num:Int = 0;
+
+			menuItemsOG.insert(2, 'Leave Charting Mode');
+			menuItemsOG.insert(3 + num, 'Toggle Practice Mode');
+			menuItemsOG.insert(4 + num, 'Toggle Botplay');
+		}
+
 		menuItems = menuItemsOG;
 		switch (PlayState.SONG.song.toLowerCase())
 		{
-			case 'cheating' | 'unfairness' | 'disruption' | 'screwed':
+			case 'cheating' | 'unfairness' | 'disruption':
 	        	menuItems = menuCryAbouIt;
-			case 'opposition':
+			case 'ok':
 	        	menuItems = menuFuckYou;
 		}
 
@@ -49,7 +64,12 @@ class PauseSubState extends MusicBeatSubstate
 		}
 		difficultyChoices.push('BACK');
 
-		pauseMusic = new FlxSound().loadEmbedded(Paths.music('breakfast'), true, true);
+		pauseMusic = new FlxSound();
+		if(songName != null) {
+			pauseMusic.loadEmbedded(Paths.music(songName), true, true);
+		} else if (songName != 'None') {
+			pauseMusic.loadEmbedded(Paths.music(Paths.formatToSongPath(ClientPrefs.pauseMusic)), true, true);
+		}
 		pauseMusic.volume = 0;
 		pauseMusic.play(false, FlxG.random.int(0, Std.int(pauseMusic.length / 2)));
 
@@ -86,15 +106,27 @@ class PauseSubState extends MusicBeatSubstate
 		practiceText.setFormat(Paths.font('comic-sans.ttf'), 32);
 		practiceText.x = FlxG.width - (practiceText.width + 20);
 		practiceText.updateHitbox();
-		practiceText.visible = PlayState.practiceMode;
+		practiceText.visible = PlayState.instance.practiceMode;
+		practiceText.alpha = 0;
 		add(practiceText);
+		
+		var chartingText:FlxText = new FlxText(20, 15 + 101, 0, "CHARTING MODE", 32);
+		chartingText.scrollFactor.set();
+		chartingText.setFormat(Paths.font('comic-sans.ttf'), 32);
+		chartingText.x = FlxG.width - (chartingText.width + 20);
+		chartingText.y = FlxG.height - (chartingText.height + 20);
+		chartingText.updateHitbox();
+		chartingText.visible = PlayState.chartingMode;
+		chartingText.alpha = 0;
+		add(chartingText);
 
 		botplayText = new FlxText(20, FlxG.height - 40, 0, "BOTPLAY", 32);
 		botplayText.scrollFactor.set();
 		botplayText.setFormat(Paths.font('comic-sans.ttf'), 32);
+		botplayText.alpha = 0;
 		botplayText.x = FlxG.width - (botplayText.width + 20);
 		botplayText.updateHitbox();
-		botplayText.visible = PlayState.cpuControlled;
+		botplayText.visible = PlayState.instance.cpuControlled;
 		add(botplayText);
 
 		blueballedTxt.alpha = 0;
@@ -109,6 +141,9 @@ class PauseSubState extends MusicBeatSubstate
 		FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
 		FlxTween.tween(levelDifficulty, {alpha: 1, y: levelDifficulty.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
 		FlxTween.tween(blueballedTxt, {alpha: 1, y: blueballedTxt.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.7});
+		FlxTween.tween(botplayText, {alpha: 1}, 0.6, {ease: FlxEase.quartInOut, startDelay: 1});
+		FlxTween.tween(chartingText, {alpha: 1}, 0.8, {ease: FlxEase.quartInOut, startDelay: 1});
+		FlxTween.tween(practiceText, {alpha: 1}, 1, {ease: FlxEase.quartInOut, startDelay: 1});
 
 		grpMenuShit = new FlxTypedGroup<Alphabet>();
 		add(grpMenuShit);
@@ -116,15 +151,27 @@ class PauseSubState extends MusicBeatSubstate
 		for (i in 0...menuItems.length)
 		{
 			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, menuItems[i], true, false);
-			songText.isMenuItem = false;
-			songText.itemType = "D-Shape";
+			songText.isPauseItem = true;
 			songText.targetY = i;
+			songText.screenCenter(X);
 			grpMenuShit.add(songText);
 		}
 
 		changeSelection();
 
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
+
+		#if android
+		if (PlayState.chartingMode)
+		{
+				addVirtualPad(FULL, A);
+		}
+		else
+		{
+				addVirtualPad(UP_DOWN, A);
+		}
+		addPadCamera();
+		#end
 	}
 
 	override function update(elapsed:Float)
@@ -160,59 +207,11 @@ class PauseSubState extends MusicBeatSubstate
 					MusicBeatState.resetState();
 					FlxG.sound.music.volume = 0;
 					PlayState.changedDifficulty = true;
-					PlayState.cpuControlled = false;
+					PlayState.instance.cpuControlled = false;
+					PlayState.chartingMode = false;
 					return;
 				}
 			} 
-
-			switch (PlayState.SONG.song.toLowerCase())
-			{
-				case 'opposition':
-				switch (daSelected)
-				{
-					case "Resume":
-						close();
-					case "Restart Song":
-						CustomFadeTransition.nextCamera = transCamera;
-						MusicBeatState.resetState();
-						FlxG.sound.music.volume = 0;
-					case 'Change Difficulty':
-						menuItems = difficultyChoices;
-						regenMenu();
-					case 'BACK':
-						menuItems = menuFuckYou;
-						regenMenu();
-				}
-				case 'cheating' | 'unfairness' | 'disruption' | 'applecore':
-				switch (daSelected)
-				{
-					case "Resume":
-						close();
-					case 'Change Difficulty':
-						menuItems = difficultyChoices;
-						regenMenu();
-					case "Restart Song":
-						CustomFadeTransition.nextCamera = transCamera;
-						MusicBeatState.resetState();
-						FlxG.sound.music.volume = 0;
-					case "Exit to menu":
-						PlayState.deathCounter = 0;
-						PlayState.seenCutscene = false;
-						CustomFadeTransition.nextCamera = transCamera;
-						if(PlayState.isStoryMode) {
-							MusicBeatState.switchState(new StoryMenuState());
-						} else {
-							MusicBeatState.switchState(new FreeplayState());
-						}
-						FlxG.sound.playMusic(Paths.music('freakyMenu'));
-						PlayState.usedPractice = false;
-						PlayState.changedDifficulty = false;
-						PlayState.cpuControlled = false;
-					case 'BACK':
-						menuItems = menuCryAbouIt;
-						regenMenu();
-				}
-			}
 
 			switch (daSelected)
 			{
@@ -222,34 +221,87 @@ class PauseSubState extends MusicBeatSubstate
 					menuItems = difficultyChoices;
 					regenMenu();
 				case 'Toggle Practice Mode':
-					PlayState.practiceMode = !PlayState.practiceMode;
-					PlayState.usedPractice = true;
-					practiceText.visible = PlayState.practiceMode;
+					PlayState.instance.practiceMode = !PlayState.instance.practiceMode;
+					PlayState.changedDifficulty = true;
+					practiceText.visible = PlayState.instance.practiceMode;
 				case "Restart Song":
-					CustomFadeTransition.nextCamera = transCamera;
-					MusicBeatState.resetState();
-					FlxG.sound.music.volume = 0;
-				case 'Botplay':
-					PlayState.cpuControlled = !PlayState.cpuControlled;
-					PlayState.usedPractice = true;
-					botplayText.visible = PlayState.cpuControlled;
+					restartSong();
+				case "Leave Charting Mode":
+				    restartSong();
+					PlayState.chartingMode = false;
+				case 'Toggle Botplay':
+					PlayState.instance.cpuControlled = !PlayState.instance.cpuControlled;
+					PlayState.changedDifficulty = true;
+					PlayState.instance.botplayTxt.visible = PlayState.instance.cpuControlled;
+					PlayState.instance.botplayTxt.alpha = 1;
+					PlayState.instance.botplaySine = 0;
+				case 'Chart Editor':
+					PlayState.instance.openChartEditor();
+					PlayState.chartingMode = true;
 				case "Exit to menu":
 					PlayState.deathCounter = 0;
 					PlayState.seenCutscene = false;
 					CustomFadeTransition.nextCamera = transCamera;
 					if(PlayState.isStoryMode) {
 						MusicBeatState.switchState(new StoryMenuState());
-					} else {
-						MusicBeatState.switchState(new FreeplayState());
+						FlxG.sound.playMusic(Paths.music('freakyMenu'));
 					}
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
-					PlayState.usedPractice = false;
+					if(PlayState.isFreeplay) {
+						MusicBeatState.switchState(new FreeplayState());
+						FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					}
+
+					if(PlayState.isPurStoryMode) {
+						MusicBeatState.switchState(new NewStoryPurgatory());
+						FlxG.sound.playMusic(Paths.music('purFreakyMenu'));
+					}
+					if(PlayState.isFreeplayPur) {
+						MusicBeatState.switchState(new PurFreeplayState());
+						FlxG.sound.playMusic(Paths.music('purFreakyMenu'));
+					} // @badcodeinfnfmods
+
+					PlayState.instance.practiceMode = false;
 					PlayState.changedDifficulty = false;
-					PlayState.cpuControlled = false;
+					PlayState.instance.cpuControlled = false;
+					PlayState.chartingMode = false;
+				case "Exit to Options menu":
+					PlayState.deathCounter = 0;
+					PlayState.seenCutscene = false;
+					CustomFadeTransition.nextCamera = transCamera;
+					MusicBeatState.switchState(new options.OptionsState());
+					
+					if (PlayState.isFreeplayPur || PlayState.isPurStoryMode) {
+						FlxG.sound.playMusic(Paths.music('purFreakyMenu'));
+					}
+					else if (PlayState.isFreeplay || PlayState.isStoryMode) {
+						FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					}
+
+					PlayState.instance.practiceMode = false;
+					PlayState.changedDifficulty = false;
+					PlayState.instance.cpuControlled = false;
+					PlayState.chartingMode = false;
 				case 'BACK':
 					menuItems = menuItemsOG;
 					regenMenu();
 			}
+		}
+	}
+
+	public static function restartSong(noTrans:Bool = false)
+	{
+		PlayState.instance.paused = true; // For lua
+		FlxG.sound.music.volume = 0;
+		PlayState.instance.vocals.volume = 0;
+
+		if(noTrans)
+		{
+			FlxTransitionableState.skipNextTransOut = true;
+			FlxG.resetState();
+		}
+		else
+		{
+			MusicBeatState.resetState();
 		}
 	}
 

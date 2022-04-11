@@ -1,0 +1,18 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "btw i have your ip adress.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambigrin"
+		},
+		{
+			"expression": "shock",
+			"text": "fuck",
+			"boxState": "normal",
+			"speed": 0.04,
+			"portrait":"bf-extra"
+		}
+	]
+}

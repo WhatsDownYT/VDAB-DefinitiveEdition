@@ -1,0 +1,25 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "cock.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bambisad"
+		},
+		{
+			"expression": "talk",
+			"text": "balls",
+			"boxState": "normal",
+			"speed": 0.04,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "COCK",
+			"boxState": "normal",
+			"speed": 0.045,
+			"portrait": "bambigrin"
+		}
+	]
+}

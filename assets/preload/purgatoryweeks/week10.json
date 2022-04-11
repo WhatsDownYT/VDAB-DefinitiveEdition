@@ -1,0 +1,30 @@
+{
+	"storyName": "DATA_EXPUNGED PART 2",
+	"hideFreeplay": false,
+	"weekBackground": "scaryooo",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "week9",
+	"startUnlocked": false,
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"Antagonism",
+			"bambi",
+			[
+				64,
+				89,
+				235
+			]
+		]
+	],
+	"weekName": "VS. EXPUNGED WEEK PART 2 - ANTAGONISM"
+}

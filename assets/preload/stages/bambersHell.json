@@ -1,7 +1,7 @@
 {
 	"directory": "",
-	"defaultZoom": 0.9,
-	"isPixelStage": false,
+	"defaultZoom": 0.7,
+	"is3DStage": true,
 
 	"boyfriend": [770, 100],
 	"girlfriend": [400, 130],

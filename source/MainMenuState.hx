@@ -19,14 +19,15 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.app.Application;
 import Achievements;
+import flixel.input.keyboard.FlxKey;
 import editors.MasterEditorMenu;
 
 using StringTools;
 
 class MainMenuState extends MusicBeatState
 {
-	public static var psychEngineVersion:String = '0.4.2 Dave'; //This is also used for Discord RPC
-	public static var curModVer:String = 'BETA 1.1'; //This is also used for Discord RPC
+	public static var psychEngineVersion:String = '0.5.2h'; //This is also used for Discord RPC
+	public static var curModVer:String = '1.0'; //This is also used for yo maama aaa
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
@@ -38,6 +39,9 @@ class MainMenuState extends MusicBeatState
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
+	var debugKeys:Array<FlxKey>;
+
+	public static var sexo3:Bool = true;
 
 	public static var firstStart:Bool = true;
 
@@ -45,7 +49,7 @@ class MainMenuState extends MusicBeatState
 	
 	public static var daRealEngineVer:String = 'David';
 
-	public static var engineVers:Array<String> = ['David'];
+	public static var engineVers:Array<String> = ['David', 'Bandu', 'Bombu', 'Bamburg', 'Golden Tristan', 'Expunged'];
 
 	public static var bgPaths:Array<String> = 
 	[
@@ -64,6 +68,8 @@ class MainMenuState extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
 		#end
+
+		debugKeys = ClientPrefs.copyKey(ClientPrefs.keyBinds.get('debug_2'));
 
 		camGame = new FlxCamera();
 		camAchievement = new FlxCamera();
@@ -154,6 +160,10 @@ class MainMenuState extends MusicBeatState
 		// NG.core.calls.event.logEvent('swag').send();
 
 		changeItem();
+
+		#if android
+		addVirtualPad(UP_DOWN, A_B_E);
+		#end
 		
 		super.create();
 	}
@@ -189,6 +199,7 @@ class MainMenuState extends MusicBeatState
 				selectedSomethin = true;
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 				MusicBeatState.switchState(new TitleState());
+				sexo3 = false;
 			}
 
 			if (controls.ACCEPT)
@@ -204,6 +215,8 @@ class MainMenuState extends MusicBeatState
 						
 						if(ClientPrefs.flashing)
 							FlxFlicker.flicker(magenta, 1.1, 0.15, false);
+
+						FlxTween.tween(FlxG.camera, {zoom:1.35}, 1.45, {ease: FlxEase.expoIn});
 	
 						menuItems.forEach(function(spr:FlxSprite)
 						{
@@ -238,8 +251,8 @@ class MainMenuState extends MusicBeatState
 					}
 				}
 			}
-			#if desktop
-			if (FlxG.keys.justPressed.SEVEN)
+			#if !html5
+			else if (FlxG.keys.anyJustPressed(debugKeys) #if android || _virtualpad.buttonE.justPressed #end)
 			{
 			  selectedSomethin = true;
 			  MusicBeatState.switchState(new MasterEditorMenu());
@@ -270,7 +283,7 @@ class MainMenuState extends MusicBeatState
 				case 'awards':
 					MusicBeatState.switchState(new AchievementsMenuState());
 				case 'options':
-					MusicBeatState.switchState(new OptionsState());
+					MusicBeatState.switchState(new options.OptionsState());
 			}
 		}
 
